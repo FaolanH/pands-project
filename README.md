@@ -11,3 +11,5 @@
   ###### - what libraries are available to help me display this data?
   ###### - can I use user input to ask the user what they want to see?
   ###### - investigate the pandas read.csv to see what can be done
+
+# The iris dataset has been added into this repository, including the raw data, description of the data and index. 
