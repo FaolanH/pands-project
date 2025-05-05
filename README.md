@@ -5,13 +5,17 @@
 ## Colours used in the Project
 ### The colours used in the plots throughout the project are based on the colours of the iris flowers. 
 
+### Palette:
+![Iris_dataset_colour_scheme](https://github.com/user-attachments/assets/36592a7e-b26e-41f6-a237-a9777c61331f)
+Source: https://colorkit.co/color-palette-generator/B9B0E7-7c70cb-632AC5-E1AD01-819929/
+
 ### Setosa Iris flower 
 
-### 5A4FCF
+### HEX Code: #7c70cb
 
-![image](https://github.com/user-attachments/assets/6f22a22f-7161-4c11-8e8a-aa57993441d9)
+![image](https://github.com/user-attachments/assets/d3e3c930-7059-42c1-af2b-e03d8d0e1163)
 
-Source: https://www.colorhexa.com/5a4fcf
+Source: https://www.colorhexa.com/7c70cb
 
 
 ![image](https://github.com/user-attachments/assets/5e2f8236-cfd0-4034-82c7-0cb690a0d25f)
@@ -20,7 +24,7 @@ Source: https://www.gardenia.net/plant/iris-setosa
 
 ### Versicolor Iris flower
 
-### #632AC5
+### HEX Code: #632AC5
 
 ![image](https://github.com/user-attachments/assets/7cffb87a-1080-4349-9b9f-900cd7503ef1)
 
@@ -32,7 +36,7 @@ Source: https://www.gardenia.net/plant/iris-versicolor
 
 ### Virginica Iris flower
 
-### B9B0E7
+### HEX Code: #B9B0E7
 
 ![image](https://github.com/user-attachments/assets/7446098c-ba03-463e-898f-3eb8b3147860)
 
@@ -42,7 +46,21 @@ Source: [https://www.colorhexa.com/8b85e0](https://www.colorhexa.com/b9b0e7)
 
 Souce: https://www.gardenia.net/plant/iris-virginica-var-shrevei
 
+### Yellow signal (accent colour)
 
+### HEX Code: #E1AD01
+
+![image](https://github.com/user-attachments/assets/4a8de5db-dab1-4530-ad92-6a3d74e2f1f7)
+
+Source: https://www.colorhexa.com/e1ad01
+
+### Green stem (accent colour)
+
+### HEX Code: #819929
+
+![image](https://github.com/user-attachments/assets/8789636a-63ac-41e8-8282-a0a370403653)
+
+[Source: https://www.colorhexa.com/9ab46e](https://www.colorhexa.com/819929)
 
 
 #### Project Plan
