@@ -1,0 +1,3 @@
+There are two files in this folder:
+- iris.data: the raw dataset which is used for much of the analysis in this project 
+- iris.names: includes information on sources, key uses and summary statistics
