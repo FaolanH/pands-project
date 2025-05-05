@@ -9,6 +9,8 @@
 ![Iris_dataset_colour_scheme](https://github.com/user-attachments/assets/36592a7e-b26e-41f6-a237-a9777c61331f)
 Source: https://colorkit.co/color-palette-generator/B9B0E7-7c70cb-632AC5-E1AD01-819929/
 
+### Used ColorPicker to select hex codes from the images, source: https://imagecolorpicker.com/
+
 ### Setosa Iris flower 
 
 ### HEX Code: #7c70cb
