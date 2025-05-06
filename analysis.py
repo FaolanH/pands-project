@@ -30,4 +30,17 @@ features_file = open("features_file.txt", "w")
 features_file.write ("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
 features_file.close()
 
-# ----------
+# ---------- Dividing the features up ----------
+# Source: DataCamp, Intermediate Python, Dictionaries and Pandas Chapter, loc and iloc (https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
+
+sepal_length = pd_iris_data.iloc[0:,0]
+sepal_width = pd_iris_data.iloc[0:,1]
+petal_length = pd_iris_data.iloc[0:,2]
+petal_width = pd_iris_data.iloc[0:,3]
+
+# Ensure that the output doesn't include unnecessary data like dtype:float64 (https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
+
+print (f'Sepal Length is:\n{sepal_length.to_string()}')
+print (f'Sepal Width is:\n{sepal_width.to_string()}')
+print (f'Petal Length is:\n{petal_length.to_string()}')
+print (f'Petal Width is:\n{petal_width.to_string()}')
