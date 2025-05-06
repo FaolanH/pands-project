@@ -39,8 +39,29 @@ petal_length = pd_iris_data.iloc[0:,2]
 petal_width = pd_iris_data.iloc[0:,3]
 
 # Ensure that the output doesn't include unnecessary data like dtype:float64 (https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
-
+'''
 print (f'Sepal Length is:\n{sepal_length.to_string()}')
 print (f'Sepal Width is:\n{sepal_width.to_string()}')
 print (f'Petal Length is:\n{petal_length.to_string()}')
 print (f'Petal Width is:\n{petal_width.to_string()}')
+'''
+
+# ---------- Creating histograms for individual features ----------
+# Source: DataCamp, Intermediate Python, Chapter Matplotlib (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
+
+# plotting the histogram using sepal_length data, with 20 bins (or bars)
+plt.hist (sepal_length,bins = 20, edgecolor = 'black')
+
+# setting the xticks to show the cm
+plt.xticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
+
+# Setting the title
+plt.title("The sepal length of the Iris flower samples")
+# setting the x axis 
+plt.xlabel ("Sepal length (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples per bin")
+
+# showing the plot
+plt.show()
