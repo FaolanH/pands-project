@@ -17,6 +17,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns 
 
 
+# ---------- Importing the iris dataset through pandas, the species names can be called directly ----------
+
+pd_iris_data = pd.read_csv ("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv")
+
+
 # ---------- Creating an initial summary file for the variables ---------- 
 # Source for writing and creating txt files, W3 Schools: https://w3schools.tech/tutorial/python/python_write_to_file
 
