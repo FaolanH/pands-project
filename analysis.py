@@ -49,19 +49,25 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 # ---------- Creating histograms for individual features ----------
 # Source: DataCamp, Intermediate Python, Chapter Matplotlib (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
 
+# Sepal Length Histogram 
+
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
-plt.hist (sepal_length,bins = 20, edgecolor = 'black')
+plt.hist (sepal_length,bins = 20, edgecolor = 'black', color = '#7c70cb')
 
 # setting the xticks to show the cm
 plt.xticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
 
 # Setting the title
 plt.title("The sepal length of the Iris flower samples")
+
 # setting the x axis 
 plt.xlabel ("Sepal length (in centimeters)")
 
 # setting the y axis label
 plt.ylabel ("Number of samples per bin")
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # showing the plot
 plt.show()
