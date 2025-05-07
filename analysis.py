@@ -16,6 +16,9 @@ import matplotlib.pyplot as plt
 # this module is used to visualise the data on more complicated plots
 import seaborn as sns 
 
+# this module is used to bring in the dataset in a different form
+from sklearn.datasets import load_iris
+
 
 # ---------- Importing the iris dataset through pandas, the species names can be called directly ----------
 
@@ -46,13 +49,31 @@ print (f'Petal Length is:\n{petal_length.to_string()}')
 print (f'Petal Width is:\n{petal_width.to_string()}')
 '''
 
+# ---------- Breaking down by species ----------
+
+setosa = pd_iris_data.iloc[0:50,]
+versicolor = pd_iris_data.iloc[50:100,]
+virginica = pd_iris_data.iloc[100:,]
+
+
+setosa_sw = pd_iris_data.iloc[0:50,1]
+versicolor_sw = pd_iris_data.iloc[50:100,1]
+virginica_sw = pd_iris_data.iloc[100:,1]
+
+sw = ([setosa_sw, versicolor_sw, virginica_sw])
+
+sepal_width_sw = np.array(setosa, pd_iris_data.iloc[0:,1])
+
 # ---------- Creating histograms for individual features ----------
 # Source: DataCamp, Intermediate Python, Chapter Matplotlib (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
 
 # Sepal Length Histogram 
+'''
+# setting the colours
+colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
-plt.hist (sepal_length,bins = 20, edgecolor = 'black', color = '#7c70cb')
+plt.hist (sw, bins = 20, edgecolor = 'black')#, color = colours)
 
 # setting the xticks to show the cm
 plt.xticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5,8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
@@ -71,3 +92,18 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # showing the plot
 plt.show()
+
+
+# Attempting to plot three bars on one histogram
+
+x = np.random.randn(1000, 3)
+
+colours = ('#7c70cb', '#632AC5', '#B9B0E7')
+
+# plotting the histogram using sepal_length data, with 20 bins (or bars)
+#plt.hist (sepal_width_sw, bins = 20, edgecolor = 'black', color = colours)
+
+#plt.show()
+
+#print (sepal_width_sw)
+'''
