@@ -54,8 +54,6 @@ print (f'Petal Length is:\n{petal_length.to_string()}')
 print (f'Petal Width is:\n{petal_width.to_string()}')
 '''
 
-#epal_width_sw = np.array(setosa, pd_iris_data.iloc[0:,1])
-
 # ---------- Creating histograms for individual features ----------
 # Source: DataCamp, Intermediate Python, Chapter Matplotlib (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
 
