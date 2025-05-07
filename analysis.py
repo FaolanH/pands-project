@@ -63,7 +63,7 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 # Source: https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries
 
 # ---------- Sepal Length ----------
-'''
+
 # to show the legend, this needs to be brought in as a sub plot
 fig,ax = plt.subplots()
  
@@ -147,7 +147,7 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 plt.hist (sw, bins = 8, edgecolor = 'black', color = colours)
 
 plt.show()
-'''
+
 # ---------- Petal Length ----------
 
 # to show the legend, this needs to be brought in as a sub plot
@@ -173,7 +173,7 @@ pl = ([setosa_pl, versicolor_pl, virginica_pl])
 plt.title("The petal length of the Iris flower samples by species")
 
 # setting the x axis 
-plt.xlabel ("Sepal length (in centimeters)")
+plt.xlabel ("Petal length (in centimeters)")
 
 # setting the y axis label
 plt.ylabel ("Number of samples per species")
@@ -188,5 +188,48 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
 plt.hist (pl, bins = 8, edgecolor = 'black', color = colours)
+
+plt.show()
+
+# ---------- Petal width ----------
+
+# to show the legend, this needs to be brought in as a sub plot
+fig,ax = plt.subplots()
+ 
+# Setting the legend styles for each variable
+setosa = mpatches.Patch(facecolor = '#7c70cb', edgecolor = 'black', label = 'Setosa')
+versicolor = mpatches.Patch(facecolor = '#632AC5', edgecolor = 'black', label = 'Versicolor')
+virginica =  mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 'Virginica')
+
+# plotting the legend
+ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
+
+# Setting the data location for each of the species: 0:50 sets the first row (0) up to but not including 50 (aka 49) which is all the setosa data. The ,1 that follows sets the column (sepal width)
+setosa_pw = pd_iris_data.iloc[0:50,3]
+versicolor_pw = pd_iris_data.iloc[50:100,3]
+virginica_pw = pd_iris_data.iloc[100:150,3]
+
+# pulling all three 
+pw = ([setosa_pw, versicolor_pw, virginica_pw])
+
+# Setting the title
+plt.title("The petal width of the Iris flower samples by species")
+
+# setting the x axis 
+plt.xlabel ("Petal Width (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples per species")
+
+# setting the xticks to show the cm
+plt.xticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
+
+colours = ('#7c70cb', '#632AC5', '#B9B0E7')
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the histogram using sepal_length data, with 20 bins (or bars)
+plt.hist (pw, bins = 8, edgecolor = 'black', color = colours)
 
 plt.show()
