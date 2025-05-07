@@ -63,7 +63,7 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 # Source: https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries
 
 # ---------- Sepal Length ----------
-
+'''
 # to show the legend, this needs to be brought in as a sub plot
 fig,ax = plt.subplots()
  
@@ -162,12 +162,12 @@ virginica =  mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
 
 # Setting the data location for each of the species: 0:50 sets the first row (0) up to but not including 50 (aka 49) which is all the setosa data. The ,1 that follows sets the column (sepal width)
-setosa_sw = pd_iris_data.iloc[0:50,2]
-versicolor_sw = pd_iris_data.iloc[50:100,2]
-virginica_sw = pd_iris_data.iloc[100:150,2]
+setosa_pl = pd_iris_data.iloc[0:50,2]
+versicolor_pl = pd_iris_data.iloc[50:100,2]
+virginica_pl = pd_iris_data.iloc[100:150,2]
 
 # pulling all three 
-sw = ([setosa_sw, versicolor_sw, virginica_sw])
+pl = ([setosa_pl, versicolor_pl, virginica_pl])
 
 # Setting the title
 plt.title("The petal length of the Iris flower samples by species")
@@ -179,7 +179,7 @@ plt.xlabel ("Sepal length (in centimeters)")
 plt.ylabel ("Number of samples per species")
 
 # setting the xticks to show the cm
-plt.xticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
+plt.xticks ([1,2,3,4,5,6,7], ["1cm", "2cm", "3cm", "4cm", "5cm", "6cm", "7cm"])
 
 colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 
@@ -187,7 +187,6 @@ colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
-plt.hist (sw, bins = 10, edgecolor = 'black', color = colours)
+plt.hist (pl, bins = 8, edgecolor = 'black', color = colours)
 
 plt.show()
-'''
