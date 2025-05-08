@@ -3,7 +3,9 @@
 # Author: Faolán Hamilton
 
 # Source: https://stackoverflow.com/questions/8265583/dividing-python-module-into-multiple-regions
+
 # region Import
+
 # ---------- Importing the modules I will need for this project ----------
 
 # this module is used to analyse the data and perform calculations
@@ -23,7 +25,6 @@ from sklearn.datasets import load_iris
 
 # bringing in mpatches allows the legend to be set easily
 import matplotlib.patches as mpatches
-
 
 # ---------- Importing the iris dataset through pandas, the species names can be called directly ----------
 
@@ -65,6 +66,141 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 #endregion
 
 #region Histograms
+
+# ---------- Creating histograms for individual features ----------
+
+# ---------- Sepal Length ----------
+
+# Setting the data location 0:150 sets all rows (0) up to but not including 150 (aka 149). The ,0 that follows sets the column (sepal_length) and so on.
+sl = pd_iris_data.iloc[0:150,0]
+
+# Setting the title
+plt.title("The sepal length of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel ("Sepal length (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples")
+
+# setting the xticks to show the cm
+plt.xticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
+
+# setting the plot colours
+colours = ('#7c70cb')
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the histogram using sepal_length data, with 10 bins (or bars)
+plt.hist (sl, bins = 10, edgecolor = 'black', color = colours)
+
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/sepal_length', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
+
+# ---------- Sepal Width ----------
+
+# Setting the data location 0:150 sets all rows (0) up to but not including 150 (aka 149). The ,1 that follows sets the column (sepal_width) and so on.
+sw = pd_iris_data.iloc[0:150,1]
+
+# Setting the title
+plt.title("The sepal width of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel ("Sepal width (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples")
+
+# setting the xticks to show the cm
+plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
+
+# setting the plot colours
+colours = ('#632AC5')
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the histogram using sepal_width data, with 10 bins (or bars)
+plt.hist (sw, bins = 10, edgecolor = 'black', color = colours)
+
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/sepal_width', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
+
+# ---------- Petal Length ----------
+
+# Setting the data location 0:150 sets all rows (0) up to but not including 150 (aka 149). The ,2 that follows sets the column (petal_length) and so on.
+pl = pd_iris_data.iloc[0:150,2]
+
+# Setting the title
+plt.title("The petal length of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel ("Petal length (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples")
+
+# setting the xticks to show the cm
+plt.xticks ([1,2,3,4,5,6,7], ["1cm", "2cm", "3cm", "4cm", "5cm", "6cm", "7cm"])
+
+# setting the plot colours
+colours = ('#E1AD01')
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the histogram using petal_length data, with 10 bins (or bars)
+plt.hist (pl, bins = 10, edgecolor = 'black', color = colours)
+
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/petal_length', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close ()
+
+# ---------- Petal width ----------
+
+# Setting the data location 0:150 sets all rows (0) up to but not including 150 (aka 149). The ,3 that follows sets the column (petal_width) and so on.
+pw = pd_iris_data.iloc[0:150,3]
+
+# Setting the title
+plt.title("The petal width of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel ("Petal Width (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples")
+
+# setting the xticks to show the cm
+plt.xticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
+
+# setting the plot colours
+colours = ('#819929')
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the histogram using sepal_length data, with 10 bins (or bars)
+plt.hist (pw, bins = 10, edgecolor = 'black', color = colours)
+
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/petal_width', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
+
+#endregion
+
+# region Hist Species
+
 # ---------- Creating histograms for individual features by species ----------
 
 # Source: DataCamp, Intermediate Python, Chapter Matplotlib (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
@@ -87,12 +223,12 @@ virginica =  mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
 
-# Setting the data location for each of the species: 0:50 sets the first row (0) up to but not including 50 (aka 49) which is all the setosa data. The ,1 that follows sets the column (sepal width)
+# Setting the data location for each of the species: 0:50 sets the first row (0) up to but not including 50 (aka 49) which is all the setosa data. The ,0 that follows sets the column (sepal_length) and so on.
 setosa_sl = pd_iris_data.iloc[0:50,0]
 versicolor_sl = pd_iris_data.iloc[50:100,0]
 virginica_sl = pd_iris_data.iloc[100:150,0]
 
-# pulling all three 
+# pulling all three together into one variable
 sl = ([setosa_sl, versicolor_sl, virginica_sl])
 
 # Setting the title
@@ -107,17 +243,20 @@ plt.ylabel ("Number of samples per species")
 # setting the xticks to show the cm
 plt.xticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
 
+# setting the colours (based on the actual iris species colours as described in the README.md)
 colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the histogram using sepal_length data, with 20 bins (or bars)
+# plotting the histogram using sepal_length data, with 10 bins (or bars)
 plt.hist (sl, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/sepal_length_species_comparison', bbox_inches = 'tight')
 
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
 
 # ---------- Sepal Width ----------
 
@@ -132,12 +271,12 @@ virginica =  mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper left', shadow = True)
 
-# Setting the data location for each of the species: 0:50 sets the first row (0) up to but not including 50 (aka 49) which is all the setosa data. The ,1 that follows sets the column (sepal width)
+# Setting the data location for each of the species: 0:50 sets the first row (0) up to but not including 50 (aka 49) which is all the setosa data. The ,1 that follows sets the column (sepal width) and so on.
 setosa_sw = pd_iris_data.iloc[0:50,1]
 versicolor_sw = pd_iris_data.iloc[50:100,1]
 virginica_sw = pd_iris_data.iloc[100:150,1]
 
-# pulling all three 
+# pulling all three together into one variable 
 sw = ([setosa_sw, versicolor_sw, virginica_sw])
 
 # Setting the title
@@ -152,16 +291,20 @@ plt.ylabel ("Number of samples per species")
 # setting the xticks to show the cm
 plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
 
+# setting the colours (based on the actual iris species colours as described in the README.md)
 colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the histogram using sepal_length data, with 20 bins (or bars)
-plt.hist (sw, bins = 8, edgecolor = 'black', color = colours)
+# plotting the histogram using sepal_width data, with 10 bins (or bars)
+plt.hist (sw, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/sepal_width_species_comparison', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
 
 # ---------- Petal Length ----------
 
@@ -181,7 +324,7 @@ setosa_pl = pd_iris_data.iloc[0:50,2]
 versicolor_pl = pd_iris_data.iloc[50:100,2]
 virginica_pl = pd_iris_data.iloc[100:150,2]
 
-# pulling all three 
+# pulling all three together into one variable
 pl = ([setosa_pl, versicolor_pl, virginica_pl])
 
 # Setting the title
@@ -196,16 +339,20 @@ plt.ylabel ("Number of samples per species")
 # setting the xticks to show the cm
 plt.xticks ([1,2,3,4,5,6,7], ["1cm", "2cm", "3cm", "4cm", "5cm", "6cm", "7cm"])
 
+# setting the colours (based on the actual iris species colours as described in the README.md)
 colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the histogram using sepal_length data, with 20 bins (or bars)
-plt.hist (pl, bins = 8, edgecolor = 'black', color = colours)
+# plotting the histogram using petal_length data, with 10 bins (or bars)
+plt.hist (pl, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/petal_length_species_comparison', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
 
 # ---------- Petal width ----------
 
@@ -225,7 +372,7 @@ setosa_pw = pd_iris_data.iloc[0:50,3]
 versicolor_pw = pd_iris_data.iloc[50:100,3]
 virginica_pw = pd_iris_data.iloc[100:150,3]
 
-# pulling all three 
+# pulling all three together into one variable
 pw = ([setosa_pw, versicolor_pw, virginica_pw])
 
 # Setting the title
@@ -240,15 +387,19 @@ plt.ylabel ("Number of samples per species")
 # setting the xticks to show the cm
 plt.xticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
 
+# setting the colours (based on the actual iris species colours as described in the README.md)
 colours = ('#7c70cb', '#632AC5', '#B9B0E7')
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the histogram using sepal_length data, with 20 bins (or bars)
-plt.hist (pw, bins = 8, edgecolor = 'black', color = colours)
+# plotting the histogram using petal_width data, with 10 bins (or bars)
+plt.hist (pw, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/petal_width_species_comparison', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
 
 #endregion
