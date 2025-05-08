@@ -61,6 +61,7 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 # Attempting to plot three bars on one histogram - I orginally attempted to do this with the pd_iris_data, but then thought because the species name was a string not a float, I coudln't create the array I needed to plot all three on the one! It turned out I didn't need to create a numpy array at all, and ended up not using that dataset for this.
 # Source: https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html
 # Source: https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries
+# Source: https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it
 
 # ---------- Sepal Length ----------
 
@@ -103,7 +104,9 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
 plt.hist (sl, bins = 10, edgecolor = 'black', color = colours)
 
-plt.show()
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/sepal_length_species_comparison', bbox_inches = 'tight')
+
 
 # ---------- Sepal Width ----------
 
@@ -146,7 +149,8 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
 plt.hist (sw, bins = 8, edgecolor = 'black', color = colours)
 
-plt.show()
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/sepal_width_species_comparison', bbox_inches = 'tight')
 
 # ---------- Petal Length ----------
 
@@ -189,7 +193,8 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
 plt.hist (pl, bins = 8, edgecolor = 'black', color = colours)
 
-plt.show()
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/petal_length_species_comparison', bbox_inches = 'tight')
 
 # ---------- Petal width ----------
 
@@ -232,4 +237,5 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using sepal_length data, with 20 bins (or bars)
 plt.hist (pw, bins = 8, edgecolor = 'black', color = colours)
 
-plt.show()
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('histogram_outputs/petal_width_species_comparison', bbox_inches = 'tight')
