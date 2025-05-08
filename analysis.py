@@ -26,6 +26,9 @@ from sklearn.datasets import load_iris
 # bringing in mpatches allows the legend to be set easily
 import matplotlib.patches as mpatches
 
+# shows the output as a table
+from tabulate import tabulate
+
 # ---------- Importing the iris dataset through pandas, the species names can be called directly ----------
 
 pd_iris_data = pd.read_csv ("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv")
@@ -40,11 +43,30 @@ iris_data = load_iris()
 # ---------- Creating an initial summary file for the variables ---------- 
 # Source for writing and creating txt files, W3 Schools: https://w3schools.tech/tutorial/python/python_write_to_file
 
+# Creating a table to show in the summary txt file 
+sl_mean = np.mean(pd_iris_data['sepal_length'])
+sw_mean = np.mean(pd_iris_data['sepal_width'])
+pl_mean = np.mean(pd_iris_data['petal_length'])
+pw_mean = np.mean(pd_iris_data['petal_width'])
+
+mean = [
+    ["Sepal Length", sl_mean],
+    ["Sepal Width", sw_mean],
+    ["Petal Length", pl_mean], 
+    ["Petal Width", pw_mean]
+]
+
+headers = ["Feature", "Mean"]
+
+mean_table = (tabulate(mean, headers=headers, tablefmt='grid'))
+
 # Features_file
 features_file = open("features_file.txt", "w")
 features_file.write ("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
+features_file.write (f'\n\n{mean_table}')
 features_file.close()
 
+#print (f'The mean sepal length is {sl_mean:.4f}')
 #endregion
 
 # region Features
