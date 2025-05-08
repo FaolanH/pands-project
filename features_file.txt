@@ -1,8 +1,8 @@
 This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.
 
               Feature  Sepal Length  Sepal Width  Petal Length
-0                Mean      5.843333     3.054000      3.758667
-1              Median      5.800000     3.000000      4.350000
-2             Minimum      4.300000     2.000000      1.000000
-3             Maximum      7.900000     4.400000      6.900000
-4  Standard Deviation      0.825301     0.432147      1.758529
+0                Mean          5.84         3.05          3.76
+1              Median          5.80         3.00          4.35
+2             Minimum          4.30         2.00          1.00
+3             Maximum          7.90         4.40          6.90
+4  Standard Deviation          0.83         0.43          1.76
