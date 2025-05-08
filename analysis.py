@@ -68,14 +68,62 @@ sw_maximum = np.max(pd_iris_data['sepal_width'])
 pl_maximum = np.max(pd_iris_data['petal_length'])
 pw_maximum = np.max(pd_iris_data['petal_width'])
 
+# Standard Deviation
+sl_stdd = np.std(pd_iris_data['sepal_length'])
+sw_stdd = np.std(pd_iris_data['sepal_width'])
+pl_stdd = np.std(pd_iris_data['petal_length'])
+pw_stdd = np.std(pd_iris_data['petal_width'])
+
+# Summary by species
+
+# Setosa Mean
+setosa_sl_mean = np.mean(pd_iris_data.iloc[0:50,0])
+setosa_sw_mean = np.mean(pd_iris_data.iloc[0:50,1])
+setosa_pl_mean = np.mean(pd_iris_data.iloc[0:50,2])
+setosa_pw_mean = np.mean(pd_iris_data.iloc[0:50,3])
+'''
+# Median 
+setosa_sl_median = np.median(pd_iris_data['sepal_length'])
+setosa_sw_median = np.median(pd_iris_data['sepal_width'])
+setosa_pl_median = np.median(pd_iris_data['petal_length'])
+setosa_pw_median = np.median(pd_iris_data['petal_width'])
+
+# Minimum 
+setosa_sl_minimum = np.min(pd_iris_data['sepal_length'])
+setosa_sw_minimum = np.min(pd_iris_data['sepal_width'])
+setosa_pl_minimum = np.min(pd_iris_data['petal_length'])
+setosa_pw_minimum = np.min(pd_iris_data['petal_width'])
+
+# Maximum 
+setosa_sl_maximum = np.max(pd_iris_data['sepal_length'])
+setosa_sw_maximum = np.max(pd_iris_data['sepal_width'])
+setosa_pl_maximum = np.max(pd_iris_data['petal_length'])
+setosa_pw_maximum = np.max(pd_iris_data['petal_width'])
+
+# Standard Deviation
+setosa_sl_stdd = np.std(pd_iris_data['sepal_length'])
+setosa_sw_stdd = np.std(pd_iris_data['sepal_width'])
+setosa_pl_stdd = np.std(pd_iris_data['petal_length'])
+setosa_pw_stdd = np.std(pd_iris_data['petal_width'])
+
 summary = {
     "Feature": ["Sepal Length", "Sepal Width", "Petal Length","Petal Width"], 
     "Mean": [sl_mean, sw_mean, pl_mean, pw_mean],
     "Median": [sl_median, sw_median, pl_median, pw_median], 
     "Minimum": [sl_minimum, sw_minimum, pl_minimum, pw_minimum], 
-    "Maximum": [sl_maximum, sw_maximum, pl_maximum, pw_maximum]
+    "Maximum": [sl_maximum, sw_maximum, pl_maximum, pw_maximum],
+    "Standard Deviation": [sl_stdd, sw_stdd, pl_stdd, pw_stdd],
+    "Setosa": ["----", "----", "----", "----"],
+    "Setosa Mean": [setosa_sl_mean, setosa_sw_mean, setosa_pl_mean, setosa_pw_mean]
 }
+'''
 
+summary = {
+    "Feature": ["Mean", "Median", "Minimum", "Maximum", "Standard Deviation"],
+    "Sepal Length": [sl_mean, sl_median, sl_minimum, sl_maximum, sl_stdd], 
+    "Sepal Width": [sw_mean, sw_median, sw_minimum, sw_maximum, sw_stdd], 
+    "Petal Length": [pl_mean, pl_median, pl_minimum, pl_maximum, pl_stdd]
+}
 # Creating the DataFrame of the summary data
 summary_df = pd.DataFrame(summary)
 
