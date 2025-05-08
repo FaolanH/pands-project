@@ -155,19 +155,7 @@ summary = {
     "Maximum": ["-", sl_maximum, sw_maximum, pl_maximum, pw_maximum,"-",  setosa_sl_maximum,setosa_sw_maximum, setosa_pl_maximum, setosa_pw_maximum],
     "Standard Deviation": ["-", sl_stdd, sw_stdd, pl_stdd, pw_stdd, "-", setosa_sl_stdd, setosa_sw_stdd, setosa_pl_stdd, setosa_pw_stdd],
 }
-'''
 
-summary = {
-    "Feature": ["Mean", "Median", "Minimum", "Maximum", "Standard Deviation"],
-    "|Overall|": ["|","|","|","|","|",],
-    "Sepal Length": [sl_mean, sl_median, sl_minimum, sl_maximum, sl_stdd], 
-    "Sepal Width": [sw_mean, sw_median, sw_minimum, sw_maximum, sw_stdd], 
-    "Petal Length": [pl_mean, pl_median, pl_minimum, pl_maximum, pl_stdd],
-    "Petal Width": [pw_mean, pw_median, pw_minimum, pw_maximum, pw_stdd],
-    "|Setosa|": ["|","|","|","|","|",],
-    "Setosa Sepal Length": [setosa_sl_mean, setosa_sl_median, setosa_sl_minimum, setosa_sl_maximum, setosa_sl_stdd]
-}
-'''
 # Creating the DataFrame of the summary data
 summary_df = pd.DataFrame(summary)
 
