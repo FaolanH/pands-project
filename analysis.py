@@ -127,10 +127,12 @@ summary = {
 # Creating the DataFrame of the summary data
 summary_df = pd.DataFrame(summary)
 
+summary_round = summary_df.round(2)
+
 # Features_file
 features_file = open("features_file.txt", "w")
 features_file.write ("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
-features_file.write (f'\n\n{summary_df}')
+features_file.write (f'\n\n{summary_round}')
 features_file.close()
 
 #print (f'The mean sepal length is {sl_mean:.4f}')
