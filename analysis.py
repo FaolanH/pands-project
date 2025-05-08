@@ -43,27 +43,32 @@ iris_data = load_iris()
 # ---------- Creating an initial summary file for the variables ---------- 
 # Source for writing and creating txt files, W3 Schools: https://w3schools.tech/tutorial/python/python_write_to_file
 
-# Creating a table to show in the summary txt file 
+# ---------- Creating a DataFrame to show in the summary txt file ----------
+# Mean
 sl_mean = np.mean(pd_iris_data['sepal_length'])
 sw_mean = np.mean(pd_iris_data['sepal_width'])
 pl_mean = np.mean(pd_iris_data['petal_length'])
 pw_mean = np.mean(pd_iris_data['petal_width'])
 
-mean = [
-    ["Sepal Length", sl_mean],
-    ["Sepal Width", sw_mean],
-    ["Petal Length", pl_mean], 
-    ["Petal Width", pw_mean]
-]
+# Median 
+sl_median = np.median(pd_iris_data['sepal_length'])
+sw_median = np.median(pd_iris_data['sepal_width'])
+pl_median = np.median(pd_iris_data['petal_length'])
+pw_median = np.median(pd_iris_data['petal_width'])
 
-headers = ["Feature", "Mean"]
+summary = {
+    "Feature": ["Sepal Length", "Sepal Width", "Petal Length","Petal Width"], 
+    "Mean": [sl_mean, sw_mean, pl_mean, pw_mean],
+    "Median": [sl_median, sw_median, pl_median, pw_median]
+}
 
-mean_table = (tabulate(mean, headers=headers, tablefmt='grid'))
+# Creating the DataFrame of the summary data
+summary_df = pd.DataFrame(summary)
 
 # Features_file
 features_file = open("features_file.txt", "w")
 features_file.write ("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
-features_file.write (f'\n\n{mean_table}')
+features_file.write (f'\n\n{summary_df}')
 features_file.close()
 
 #print (f'The mean sepal length is {sl_mean:.4f}')
