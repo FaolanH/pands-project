@@ -56,10 +56,24 @@ sw_median = np.median(pd_iris_data['sepal_width'])
 pl_median = np.median(pd_iris_data['petal_length'])
 pw_median = np.median(pd_iris_data['petal_width'])
 
+# Minimum 
+sl_minimum = np.min(pd_iris_data['sepal_length'])
+sw_minimum = np.min(pd_iris_data['sepal_width'])
+pl_minimum = np.min(pd_iris_data['petal_length'])
+pw_minimum = np.min(pd_iris_data['petal_width'])
+
+# Maximum 
+sl_maximum = np.max(pd_iris_data['sepal_length'])
+sw_maximum = np.max(pd_iris_data['sepal_width'])
+pl_maximum = np.max(pd_iris_data['petal_length'])
+pw_maximum = np.max(pd_iris_data['petal_width'])
+
 summary = {
     "Feature": ["Sepal Length", "Sepal Width", "Petal Length","Petal Width"], 
     "Mean": [sl_mean, sw_mean, pl_mean, pw_mean],
-    "Median": [sl_median, sw_median, pl_median, pw_median]
+    "Median": [sl_median, sw_median, pl_median, pw_median], 
+    "Minimum": [sl_minimum, sw_minimum, pl_minimum, pw_minimum], 
+    "Maximum": [sl_maximum, sw_maximum, pl_maximum, pw_maximum]
 }
 
 # Creating the DataFrame of the summary data
