@@ -96,25 +96,25 @@ setosa_sw_mean = np.mean(pd_iris_data.iloc[0:50,1])
 setosa_pl_mean = np.mean(pd_iris_data.iloc[0:50,2])
 setosa_pw_mean = np.mean(pd_iris_data.iloc[0:50,3])
 
-# Median 
+# Setosa Median 
 setosa_sl_median = np.median(pd_iris_data.iloc[0:50,0])
 setosa_sw_median = np.median(pd_iris_data.iloc[0:50,1])
 setosa_pl_median = np.median(pd_iris_data.iloc[0:50,2])
 setosa_pw_median = np.median(pd_iris_data.iloc[0:50,3])
 
-# Minimum 
+# Setosa Minimum 
 setosa_sl_min = np.min(pd_iris_data.iloc[0:50,0])
 setosa_sw_min = np.min(pd_iris_data.iloc[0:50,1])
 setosa_pl_min = np.min(pd_iris_data.iloc[0:50,2])
 setosa_pw_min = np.min(pd_iris_data.iloc[0:50,3])
 
-# Maximum 
+# Setosa Maximum 
 setosa_sl_max = np.max(pd_iris_data.iloc[0:50,0])
 setosa_sw_max = np.max(pd_iris_data.iloc[0:50,1])
 setosa_pl_max = np.max(pd_iris_data.iloc[0:50,2])
 setosa_pw_max = np.max(pd_iris_data.iloc[0:50,3])
 
-# Standard Deviation
+# Setosa Standard Deviation
 setosa_sl_stdd = np.std(pd_iris_data.iloc[0:50,0])
 setosa_sw_stdd = np.std(pd_iris_data.iloc[0:50,1])
 setosa_pl_stdd = np.std(pd_iris_data.iloc[0:50,2])
@@ -199,7 +199,7 @@ summary = {
     "Mean": [0, sl_mean, sw_mean, pl_mean, pw_mean, 0, setosa_sl_mean, setosa_sw_mean, setosa_pl_mean, setosa_pw_mean, 0, vs_sl_mean, vs_sw_mean, vs_pl_mean, vs_pw_mean, 0, va_sl_mean, va_sw_mean, va_pl_mean, va_pw_mean],
     "Median": [0, sl_median, sw_median, pl_median, pw_median, 0, setosa_sl_median, setosa_sw_median, setosa_pl_median, setosa_pw_median, 0, vs_sl_median, vs_sw_median, vs_pl_median, vs_pw_median, 0, va_sl_median, va_sw_median, va_pl_median, va_pw_median], 
     "Minimum": [0, sl_min, sw_min, pl_min, pw_min, 0,  setosa_sl_min, setosa_sw_min, setosa_pl_min, setosa_pw_min, 0,vs_sl_min, vs_sw_min, vs_pl_min, vs_pw_min, 0, va_sl_min, va_sw_min, va_pl_min, va_pw_min], 
-    "Maximum": [0, sl_max, sw_max, pl_max, pw_max,0,  setosa_sl_max,setosa_sw_max, setosa_pl_max, setosa_pw_max, 0, vs_sl_max, vs_sw_max, vs_pl_max, vs_pw_max, 0, va_sl_max, va_sw_max, va_pl_max, va_pw_max ],
+    "Maximum": [0, sl_max, sw_max, pl_max, pw_max, 0,  setosa_sl_max,setosa_sw_max, setosa_pl_max, setosa_pw_max, 0, vs_sl_max, vs_sw_max, vs_pl_max, vs_pw_max, 0, va_sl_max, va_sw_max, va_pl_max, va_pw_max],
     "Standard Deviation": [0, sl_stdd, sw_stdd, pl_stdd, pw_stdd, 0, setosa_sl_stdd, setosa_sw_stdd, setosa_pl_stdd, setosa_pw_stdd, 0, vs_sl_stdd, vs_sw_stdd, vs_pl_stdd, vs_pw_stdd, 0, va_sl_stdd, va_sw_stdd, va_pl_stdd, va_pw_stdd]
 }
 
@@ -211,14 +211,13 @@ summary_df['Mean'] = summary_df['Mean'].astype(float).round(1)
 summary_df['Median'] = summary_df['Median'].astype(float).round(1)
 summary_df['Standard Deviation'] = summary_df['Standard Deviation'].astype(float).round(1)
 
-print (summary_df)
 # endregion
 
 # region File
 # Features_file
 features_file = open("features_file.txt", "w")
 features_file.write ("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
-features_file.write (f'\n\n{summary_round}')
+features_file.write (f'\n\n{summary_df}')
 features_file.close()
 
 #endregion
