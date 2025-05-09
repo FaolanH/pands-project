@@ -43,6 +43,9 @@ iris_data = load_iris()
 # ---------- Creating an initial summary file for the variables ---------- 
 # Source for writing and creating txt files, W3 Schools: https://w3schools.tech/tutorial/python/python_write_to_file
 
+#endregion
+
+# region Summary
 # ---------- Creating a DataFrame to show in the summary txt file ----------
 # Source: https://www.geeksforgeeks.org/how-to-make-a-table-in-python/#using-prettytable
 
@@ -81,6 +84,9 @@ sw_stdd = np.std(pd_iris_data['sepal_width'])
 pl_stdd = np.std(pd_iris_data['petal_length'])
 pw_stdd = np.std(pd_iris_data['petal_width'])
 
+#end region
+
+# region Setosa Sum
 # Summary by species
 # Setosa
 
@@ -91,62 +97,67 @@ setosa_pl_mean = np.mean(pd_iris_data.iloc[0:50,2])
 setosa_pw_mean = np.mean(pd_iris_data.iloc[0:50,3])
 
 # Median 
-setosa_sl_median = np.median(pd_iris_data['sepal_length'])
-setosa_sw_median = np.median(pd_iris_data['sepal_width'])
-setosa_pl_median = np.median(pd_iris_data['petal_length'])
-setosa_pw_median = np.median(pd_iris_data['petal_width'])
+setosa_sl_median = np.median(pd_iris_data.iloc[0:50,0])
+setosa_sw_median = np.median(pd_iris_data.iloc[0:50,1])
+setosa_pl_median = np.median(pd_iris_data.iloc[0:50,2])
+setosa_pw_median = np.median(pd_iris_data.iloc[0:50,3])
 
 # Minimum 
-setosa_sl_minimum = np.min(pd_iris_data['sepal_length'])
-setosa_sw_minimum = np.min(pd_iris_data['sepal_width'])
-setosa_pl_minimum = np.min(pd_iris_data['petal_length'])
-setosa_pw_minimum = np.min(pd_iris_data['petal_width'])
+setosa_sl_minimum = np.min(pd_iris_data.iloc[0:50,0])
+setosa_sw_minimum = np.min(pd_iris_data.iloc[0:50,1])
+setosa_pl_minimum = np.min(pd_iris_data.iloc[0:50,2])
+setosa_pw_minimum = np.min(pd_iris_data.iloc[0:50,3])
 
 # Maximum 
-setosa_sl_maximum = np.max(pd_iris_data['sepal_length'])
-setosa_sw_maximum = np.max(pd_iris_data['sepal_width'])
-setosa_pl_maximum = np.max(pd_iris_data['petal_length'])
-setosa_pw_maximum = np.max(pd_iris_data['petal_width'])
+setosa_sl_maximum = np.max(pd_iris_data.iloc[0:50,0])
+setosa_sw_maximum = np.max(pd_iris_data.iloc[0:50,1])
+setosa_pl_maximum = np.max(pd_iris_data.iloc[0:50,2])
+setosa_pw_maximum = np.max(pd_iris_data.iloc[0:50,3])
 
 # Standard Deviation
-setosa_sl_stdd = np.std(pd_iris_data['sepal_length'])
-setosa_sw_stdd = np.std(pd_iris_data['sepal_width'])
-setosa_pl_stdd = np.std(pd_iris_data['petal_length'])
-setosa_pw_stdd = np.std(pd_iris_data['petal_width'])
+setosa_sl_stdd = np.std(pd_iris_data.iloc[0:50,0])
+setosa_sw_stdd = np.std(pd_iris_data.iloc[0:50,1])
+setosa_pl_stdd = np.std(pd_iris_data.iloc[0:50,2])
+setosa_pw_stdd = np.std(pd_iris_data.iloc[0:50,3])
 
+#endregion
+# region Versicolor
 # Summary by species
-# Setosa
+# Versicolor
 
-# Setosa Mean
-setosa_sl_mean = np.mean(pd_iris_data.iloc[0:50,0])
-setosa_sw_mean = np.mean(pd_iris_data.iloc[0:50,1])
-setosa_pl_mean = np.mean(pd_iris_data.iloc[0:50,2])
-setosa_pw_mean = np.mean(pd_iris_data.iloc[0:50,3])
+# Versicolor Mean
+versicolor_sl_mean = np.mean(pd_iris_data.iloc[0:50,0])
+versicolor_sw_mean = np.mean(pd_iris_data.iloc[0:50,1])
+versicolor_pl_mean = np.mean(pd_iris_data.iloc[0:50,2])
+versicolor_pw_mean = np.mean(pd_iris_data.iloc[0:50,3])
 
-# Median 
-setosa_sl_median = np.median(pd_iris_data['sepal_length'])
-setosa_sw_median = np.median(pd_iris_data['sepal_width'])
-setosa_pl_median = np.median(pd_iris_data['petal_length'])
-setosa_pw_median = np.median(pd_iris_data['petal_width'])
+# Versicolor Median
+versicolor_sl_median = np.median(pd_iris_data['sepal_length'])
+versicolor_sw_median = np.median(pd_iris_data['sepal_width'])
+versicolor_pl_median = np.median(pd_iris_data['petal_length'])
+versicolor_pw_median = np.median(pd_iris_data['petal_width'])
 
-# Minimum 
-setosa_sl_minimum = np.min(pd_iris_data['sepal_length'])
-setosa_sw_minimum = np.min(pd_iris_data['sepal_width'])
-setosa_pl_minimum = np.min(pd_iris_data['petal_length'])
-setosa_pw_minimum = np.min(pd_iris_data['petal_width'])
+# Versicolor Minimum
+versicolor_sl_minimum = np.min(pd_iris_data['sepal_length'])
+versicolor_sw_minimum = np.min(pd_iris_data['sepal_width'])
+versicolor_pl_minimum = np.min(pd_iris_data['petal_length'])
+versicolor_pw_minimum = np.min(pd_iris_data['petal_width'])
 
-# Maximum 
-setosa_sl_maximum = np.max(pd_iris_data['sepal_length'])
-setosa_sw_maximum = np.max(pd_iris_data['sepal_width'])
-setosa_pl_maximum = np.max(pd_iris_data['petal_length'])
-setosa_pw_maximum = np.max(pd_iris_data['petal_width'])
+# Versicolor Maximum 
+versicolor_sl_maximum = np.max(pd_iris_data['sepal_length'])
+versicolor_sw_maximum = np.max(pd_iris_data['sepal_width'])
+versicolor_pl_maximum = np.max(pd_iris_data['petal_length'])
+versicolor_pw_maximum = np.max(pd_iris_data['petal_width'])
 
-# Standard Deviation
-setosa_sl_stdd = np.std(pd_iris_data['sepal_length'])
-setosa_sw_stdd = np.std(pd_iris_data['sepal_width'])
-setosa_pl_stdd = np.std(pd_iris_data['petal_length'])
-setosa_pw_stdd = np.std(pd_iris_data['petal_width'])
+# Versicolor Standard Deviation
+versicolor_sl_stdd = np.std(pd_iris_data['sepal_length'])
+versicolor_sw_stdd = np.std(pd_iris_data['sepal_width'])
+versicolor_pl_stdd = np.std(pd_iris_data['petal_length'])
+versicolor_pw_stdd = np.std(pd_iris_data['petal_width'])
 
+#end region 
+
+# region DataFrame
 summary = {
     "Feature": ["Overall Data", "Sepal Length", "Sepal Width", "Petal Length","Petal Width", "Setosa Data", "Setosa Sepal Length", "Setosa Sepal Width", "Setosa Petal Length", "Setosa Petal Width"], 
     "Mean": ["-", sl_mean, sw_mean, pl_mean, pw_mean, "-", setosa_sl_mean, setosa_sw_mean, setosa_pl_mean, setosa_pw_mean],
@@ -162,13 +173,15 @@ summary_df = pd.DataFrame(summary)
 # Source: https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.round.html
 summary_round = summary_df.round(2)
 
+# endregion
+
+# region File
 # Features_file
 features_file = open("features_file.txt", "w")
 features_file.write ("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
 features_file.write (f'\n\n{summary_round}')
 features_file.close()
 
-#print (f'The mean sepal length is {sl_mean:.4f}')
 #endregion
 
 # region Features
