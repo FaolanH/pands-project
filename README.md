@@ -65,6 +65,9 @@ Source: https://www.colorhexa.com/e1ad01
 [Source: https://www.colorhexa.com/9ab46e](https://www.colorhexa.com/819929)
 
 
+#### Iris Dataset
+### Show the parts of the iris the data refers to "sepal", "petal", diagrams for each species
+
 #### Project Plan
 ##### - Describe the iris dataset briefly, and how other data might have similar structure
 ##### - Investigate the different ways this data can be examined, in the most simple terms (inspiration from my Principles of Data Analytics course):
