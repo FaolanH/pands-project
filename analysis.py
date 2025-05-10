@@ -307,10 +307,10 @@ setosa_sw = pd_iris_data.iloc[0:50,1]
 versicolor_sw = pd_iris_data.iloc[50:100,1]
 virginica_sw = pd_iris_data.iloc[100:150,1]
 
-sl = (sepal_length, setosa_sl, versicolor_sl, virginica_sl)
+sw = (sepal_width, setosa_sw, versicolor_sw, virginica_sw)
 
 # Setting the labels
-labels = ['Overall Sepal Length', 'Setosa Sepal Length', 'Versicolor Sepal Length', 'Virginica Sepal Length']
+labels = ['Overall Sepal Width', 'Setosa Sepal Width', 'Versicolor Sepal Width', 'Virginica Sepal Width']
 
 # For this one specifically, I did not need to assign the colours the species
 colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
@@ -375,6 +375,46 @@ for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
 plt.savefig('boxplot_outputs/petal_length_range')
+plt.close()
+
+# Setting the Petal Width Boxplot
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+fig, ax = plt.subplots(figsize=(10, 6))
+
+setosa_pw = pd_iris_data.iloc[0:50,3]
+versicolor_pw = pd_iris_data.iloc[50:100,3]
+virginica_pw = pd_iris_data.iloc[100:150,3]
+
+pw = (petal_width, setosa_pw, versicolor_pw, virginica_pw)
+
+# Setting the labels
+labels = ['Overall Petal Width', 'Setosa Petal Width', 'Versicolor Petal Width', 'Virginica Petal Width']
+
+# For this one specifically, I did not need to assign the colours the species
+colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+
+# y tick labels
+plt.yticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
+
+# Setting an appropriate title (I originally learned this method on DataCamp)
+plt.title ('Iris Species by Petal Width')
+# Setting the x axis label
+plt.xlabel ('Iris Species')
+# Setting the y axis label
+plt.ylabel ('Petal Width')
+
+# Setting a background grid for more clarity
+plt.grid(True)
+
+# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+bplot = ax.boxplot (pw, tick_labels = labels, patch_artist=True);
+
+for patch, color in zip(bplot['boxes'], colours):
+    patch.set_facecolor(color)
+
+plt.savefig('boxplot_outputs/petal_width_range')
 plt.close()
 
 #endregion
