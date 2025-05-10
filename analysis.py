@@ -240,6 +240,84 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 '''
 #endregion
 
+# region Boxplot
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+fig, ax = plt.subplots(figsize=(10, 6))
+
+setosa_pl = pd_iris_data.iloc[0:50,2]
+versicolor_pl = pd_iris_data.iloc[50:100,2]
+virginica_pl = pd_iris_data.iloc[100:150,2]
+
+pl = (petal_length, setosa_pl, versicolor_pl, virginica_pl)
+
+# Setting the labels
+labels = ['Overall Petal Length', 'Setosa Petal Length', 'Versicolor Petal Length', 'Virginica Petal Length']
+
+# For this one specifically, I did not need to assign the colours the species
+colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+
+# y tick labels
+plt.yticks ([1,2,3,4,5,6,7], ['1cm', '2cm', '3cm', '4cm', '5cm', '6cm', '7cm'])
+
+# Setting an appropriate title (I originally learned this method on DataCamp)
+plt.title ('Iris Species by Petal Length')
+# Setting the x axis label
+plt.xlabel ('Iris Species')
+# Setting the y axis label
+plt.ylabel ('Petal Length')
+
+# Setting a background grid for more clarity
+plt.grid(True)
+
+# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+bplot = ax.boxplot (pl, tick_labels = labels, patch_artist=True);
+
+for patch, color in zip(bplot['boxes'], colours):
+    patch.set_facecolor(color)
+
+plt.savefig('boxplot_outputs/petal_length_range')
+plt.close()
+
+#endregion
+'''
+# region Scatterplot
+
+# Sepal Width Min and Max amounts
+
+x = (sw_min)#, setosa_sw_min, vs_sw_min, va_sw_min)
+#y = (sw_min, setosa_sw_min, vs_sw_min, va_sw_min)
+y = (sw_max)#, setosa_sw_max, vs_sw_max, va_sw_max)
+
+# Setting the title
+plt.title("The minimum and maximum sepal width of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel ("Sepal width (in centimeters)")
+
+# setting the y axis label
+plt.ylabel ("Number of samples")
+
+# setting the xticks to show the cm
+#plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
+
+# setting the plot colours
+colours = ('#819929')#, '#7c70cb', '#632AC5', '#B9B0E7')
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the histogram using sepal_length data, with 10 bins (or bars)
+plt.hist (x, bins = 10, color = colours)
+
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+plt.savefig('scatterplot_outputs/sepal_width_min_max', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it doesn't go onto the graph
+plt.close()
+
+
 #region Histograms
 
 # ---------- Creating histograms for individual features ----------
@@ -578,3 +656,4 @@ plt.savefig('histogram_outputs/petal_width_species_comparison', bbox_inches = 't
 plt.close()
 
 #endregion
+'''
