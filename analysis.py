@@ -26,6 +26,9 @@ from sklearn.datasets import load_iris
 # bringing in mpatches allows the legend to be set easily
 import matplotlib.patches as mpatches
 
+# adding colours to scatterplots
+from matplotlib.colors import LinearSegmentedColormap, ListedColormap
+
 # shows the output as a table
 from tabulate import tabulate
 
@@ -418,38 +421,41 @@ plt.savefig('boxplot_outputs/petal_width_range')
 plt.close()
 
 #endregion
-'''
+
 # region Scatterplot
 
 # Sepal Width Min and Max amounts
 
-x = (sw_min)#, setosa_sw_min, vs_sw_min, va_sw_min)
+x = (sepal_width)#, setosa_sw, versicolor_sw, virginica_sw)
 #y = (sw_min, setosa_sw_min, vs_sw_min, va_sw_min)
-y = (sw_max)#, setosa_sw_max, vs_sw_max, va_sw_max)
+y = (petal_length)#, setosa_pw, versicolor_pw, virginica_pw)
 
 # Setting the title
-plt.title("The minimum and maximum sepal width of the Iris flower samples")
+plt.title("The sepal width versus petal width of the Iris flower samples")
 
 # setting the x axis 
 plt.xlabel ("Sepal width (in centimeters)")
 
 # setting the y axis label
-plt.ylabel ("Number of samples")
+plt.ylabel ("Petal width (in centimeters)")
 
-# setting the xticks to show the cm
-#plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
+# setting the xticks to show the cm for the sepal width
+plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
+
+# setting the yticks to show the cm for the petal width
+plt.yticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
 
 # setting the plot colours
-colours = ('#819929')#, '#7c70cb', '#632AC5', '#B9B0E7')
+cmap = ListedColormap(['#819929', '#7c70cb'])#, '#632AC5', '#B9B0E7')
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the histogram using sepal_length data, with 10 bins (or bars)
-plt.hist (x, bins = 10, color = colours)
+# plotting the scatterplot using sepal_length data, with 10 bins (or bars)
+plt.scatter (x, y, marker = 's', cmap = cmap);
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
-plt.savefig('scatterplot_outputs/sepal_width_min_max', bbox_inches = 'tight')
+plt.savefig('scatterplot_outputs/sepal width v petal width', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it doesn't go onto the graph
 plt.close()
@@ -793,4 +799,3 @@ plt.savefig('histogram_outputs/petal_width_species_comparison', bbox_inches = 't
 plt.close()
 
 #endregion
-'''
