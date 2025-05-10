@@ -223,13 +223,32 @@ features_file.close()
 #endregion
 
 # region Features
-# ---------- Dividing the features up ----------
+# ---------- Dividing the features up to be used throughout the project ----------
 # Source: DataCamp, Intermediate Python, Dictionaries and Pandas Chapter, loc and iloc (https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
 
+# Sepal Length
 sepal_length = pd_iris_data.iloc[0:,0]
+setosa_sl = pd_iris_data.iloc[0:50,0]
+versicolor_sl = pd_iris_data.iloc[50:100,0]
+virginica_sl = pd_iris_data.iloc[100:150,0]
+
+# Sepal Width
 sepal_width = pd_iris_data.iloc[0:,1]
+setosa_sw = pd_iris_data.iloc[0:50,1]
+versicolor_sw = pd_iris_data.iloc[50:100,1]
+virginica_sw = pd_iris_data.iloc[100:150,1]
+
+# Petal Length 
 petal_length = pd_iris_data.iloc[0:,2]
+setosa_pl = pd_iris_data.iloc[0:50,2]
+versicolor_pl = pd_iris_data.iloc[50:100,2]
+virginica_pl = pd_iris_data.iloc[100:150,2]
+
+# Petal Width
 petal_width = pd_iris_data.iloc[0:,3]
+setosa_pw = pd_iris_data.iloc[0:50,3]
+versicolor_pw = pd_iris_data.iloc[50:100,3]
+virginica_pw = pd_iris_data.iloc[100:150,3]
 
 # Ensure that the output doesn't include unnecessary data like dtype:float64 (https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
 '''
@@ -241,6 +260,84 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 #endregion
 
 # region Boxplot
+
+# Setting the Sepal Length Boxplot
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+fig, ax = plt.subplots(figsize=(10, 6))
+
+sl = (sepal_length, setosa_sl, versicolor_sl, virginica_sl)
+
+# Setting the labels
+labels = ['Overall Sepal Length', 'Setosa Sepal Length', 'Versicolor Sepal Length', 'Virginica Sepal Length']
+
+# For this one specifically, I did not need to assign the colours the species
+colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+
+# y tick labels
+plt.yticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
+
+# Setting an appropriate title (I originally learned this method on DataCamp)
+plt.title ('Iris Species by Sepal Length')
+# Setting the x axis label
+plt.xlabel ('Iris Species')
+# Setting the y axis label
+plt.ylabel ('Sepal Length')
+
+# Setting a background grid for more clarity
+plt.grid(True)
+
+# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+bplot = ax.boxplot (sl, tick_labels = labels, patch_artist=True);
+
+for patch, color in zip(bplot['boxes'], colours):
+    patch.set_facecolor(color)
+
+plt.savefig('boxplot_outputs/sepal_length_range')
+plt.close()
+
+# Setting the Sepal Width Boxplot
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+fig, ax = plt.subplots(figsize=(10, 6))
+
+setosa_sw = pd_iris_data.iloc[0:50,1]
+versicolor_sw = pd_iris_data.iloc[50:100,1]
+virginica_sw = pd_iris_data.iloc[100:150,1]
+
+sl = (sepal_length, setosa_sl, versicolor_sl, virginica_sl)
+
+# Setting the labels
+labels = ['Overall Sepal Length', 'Setosa Sepal Length', 'Versicolor Sepal Length', 'Virginica Sepal Length']
+
+# For this one specifically, I did not need to assign the colours the species
+colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+
+# y tick labels
+plt.yticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
+
+# Setting an appropriate title (I originally learned this method on DataCamp)
+plt.title ('Iris Species by Sepal Width')
+# Setting the x axis label
+plt.xlabel ('Iris Species')
+# Setting the y axis label
+plt.ylabel ('Sepal Width')
+
+# Setting a background grid for more clarity
+plt.grid(True)
+
+# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+bplot = ax.boxplot (sw, tick_labels = labels, patch_artist=True);
+
+for patch, color in zip(bplot['boxes'], colours):
+    patch.set_facecolor(color)
+
+plt.savefig('boxplot_outputs/sepal_width_range')
+plt.close()
+
+# Setting the Petal Length Boxplot
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
