@@ -1,4 +1,6 @@
 This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.
+There is a breakdown of each feature by four categories: total, setosa, versicolor and virginica.
+Please note that a divider dud column has been included to break down the sections e.g. Overall Data which is listed as 0.0 under each measurement
 
                     Feature  Mean  Median  Minimum  Maximum  Standard Deviation
 0              Overall Data   0.0     0.0      0.0      0.0                 0.0
