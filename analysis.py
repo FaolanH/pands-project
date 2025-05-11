@@ -257,7 +257,7 @@ features_file.close()
 
 # region Features
 # ---------- Dividing the features up to be used throughout the project ----------
-# Source: DataCamp, Intermediate Python, Dictionaries and Pandas Chapter, loc and iloc(https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
+# Source: 12) loc and iloc
 
 # Species
 setosa = pd_iris_data.iloc[0:50, ]
@@ -288,7 +288,9 @@ setosa_pw = pd_iris_data.iloc[0:50,3]
 versicolor_pw = pd_iris_data.iloc[50:100,3]
 virginica_pw = pd_iris_data.iloc[100:150,3]
 
-# Ensure that the output does not include unnecessary data like dtype:float64(https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
+# Source: 13) no background output text
+# Ensure that the output does not include unnecessary data like dtype:float64
+
 '''
 print(f'Sepal Length is:\n{sepal_length.to_string()}')
 print(f'Sepal Width is:\n{sepal_width.to_string()}')
@@ -299,11 +301,16 @@ print(f'Petal Width is:\n{petal_width.to_string()}')
 
 # region SL Boxplot
 
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # Setting the Sepal Length Boxplot
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
-# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
+# Source: 16) Fig size
 
 # Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
@@ -330,17 +337,20 @@ plt.ylabel('Sepal Length')
 # Setting a background grid for more clarity
 plt.grid(True)
 
-# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this(https://matplotlib.org/stable/gallery/statistics/boxplot.html)
-# Source: linestyle - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this
+# Source: 17) Linepoint 
 medianprops = dict(linewidth = 3, color = '#819929')
 
-# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+# Source: 15) Boxplot label and colour I learned the below method for assigning colours on the matplotlib gallery
 bplot = ax.boxplot(all_sl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
-# assigning the colour to the boxplot
+# assigning the colour to the boxplot (Source: 15 Boxplot label and colour)
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
 # saving the figure in the boxplot outputs named sepal_length_range
 plt.savefig('boxplot_outputs/sepal_length_range')
 
@@ -350,11 +360,20 @@ plt.close()
 #endregion
 
 # region SW Boxplot
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
 # Setting the Sepal Width Boxplot
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
-# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
+# Source: 16) Fig size
 
 # Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
@@ -381,17 +400,20 @@ plt.ylabel('Sepal Width')
 # Setting a background grid for more clarity
 plt.grid(True)
 
-# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this(https://matplotlib.org/stable/gallery/statistics/boxplot.html)
-# Source: linestyle - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this
+# Source: 17) Linepoint 
 medianprops = dict(linewidth = 3, color = '#819929')
 
-# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+# Source: 15) Boxplot label and colour I learned the below method for assigning colours on the matplotlib gallery
 bplot = ax.boxplot(all_sw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
-# assigning the colour to the boxplot
+# assigning the colour to the boxplot (Source: 15 Boxplot label and colour)
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
 # saving the figure in the boxplot outputs named sepal_width_range
 plt.savefig('boxplot_outputs/sepal_width_range')
 
@@ -402,11 +424,19 @@ plt.close()
 
 # region PL Boxplot
 
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # Setting the Petal Length Boxplot
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
-# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
+# Source: 16) Fig size
 
 #Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
@@ -433,17 +463,20 @@ plt.ylabel('Petal Length')
 # Setting a background grid for more clarity
 plt.grid(True)
 
-# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this(https://matplotlib.org/stable/gallery/statistics/boxplot.html)
-# Source: linestyle - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this
+# Source: 17) Linepoint 
 medianprops = dict(linewidth = 3, color = '#819929')
 
-# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+# Source: 15) Boxplot label and colour I learned the below method for assigning colours on the matplotlib gallery
 bplot = ax.boxplot(all_pl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
-# assigning the colour to the boxplot
+# assigning the colour to the boxplot (Source: 15 Boxplot label and colour)
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
 # saving the figure in the boxplot outputs named petal_length_range
 plt.savefig('boxplot_outputs/petal_length_range')
 
@@ -454,11 +487,19 @@ plt.close()
 
 # region PW Boxplot
 
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # Setting the Petal Width Boxplot
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
-# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
+# This example on matplotlib was very useful, especially in adding in the axis labels and setting colours 
+# Source: 15) Boxplot label and colour
+
+# Source: 16) Fig size
 
 # Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
@@ -485,17 +526,20 @@ plt.ylabel('Petal Width')
 # Setting a background grid for more clarity
 plt.grid(True)
 
-# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this(https://matplotlib.org/stable/gallery/statistics/boxplot.html)
-# Source: linestyle - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this
+# Source: 17) Linepoint 
 medianprops = dict(linewidth = 3, color = '#819929')
 
-# as referenced above, I learned the below method for assigning colours on the matplotlib gallery
+# Source: 15) Boxplot label and colour I learned the below method for assigning colours on the matplotlib gallery
 bplot = ax.boxplot(all_pw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
-# assigning the colour to the boxplot
+# assigning the colour to the boxplot (Source: 15 Boxplot label and colour)
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
 # saving the figure in the boxplot outputs named petal_width_range
 plt.savefig('boxplot_outputs/petal_width_range')
 
@@ -506,9 +550,13 @@ plt.close()
 
 # region SW v SL Scatterplot
 
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # Sepal Width Length vs Sepal Width for each species
 
 # I tried to do this scatterplot many ways: selecting all rows and just the sepal width or sepal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
+# Source: 18) Setting scatterplot colour
 
 # Setting the x for setosa sepal width(as defined in the 'Features' section)
 x1 = setosa_sw
@@ -532,8 +580,8 @@ y3 = virginica_sl
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the scatterplot using sepal_length data
-# Source: https://pythonexamples.org/matplotlib-scatter-plot-color/
-# Source: https://matplotlib.org/stable/api/markers_api.html
+# Source: 18) Setting scatterplot colour
+# Source: 19) Markers
 plt.scatter(x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
 plt.scatter(x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
 plt.scatter(x3, y3,marker = '*', c = '#B9B0E7', label = 'Virginica')
@@ -556,7 +604,9 @@ plt.yticks([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", 
 # showing the legend, which takes the 'labels' identified previously and assigning a shadow for nicer display
 plt.legend(shadow = True)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
 # Saving the figure in the scatterplot outputs folder
 plt.savefig('scatterplot_outputs/sepal_length_v_sepal_width', bbox_inches = 'tight')
 
@@ -567,9 +617,13 @@ plt.close()
 
 # region PW v PL Scatterplot
 
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # Petal Width Length vs petal Width for each species
 
 # I tried to do this scatterplot many ways: selecting all rows and just the petal width or petal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
+# Source: 18) Setting scatterplot colour
 
 # Setting the x for setosa petal width(as defined in the 'Features' section)
 x1 = setosa_pw
@@ -593,8 +647,8 @@ y3 = virginica_pl
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the scatterplot using petal_length data
-# Source: https://pythonexamples.org/matplotlib-scatter-plot-color/
-# Source: https://matplotlib.org/stable/api/markers_api.html
+# Source: 18) Setting scatterplot colour
+# Source: 19) Markers
 plt.scatter(x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
 plt.scatter(x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
 plt.scatter(x3, y3,marker = '*', c = '#B9B0E7', label = 'Virginica')
@@ -617,7 +671,9 @@ plt.yticks([1,2,3,4,5,6,7], ['1cm', '2cm', '3cm', '4cm', '5cm', '6cm', '7cm'])
 # showing the legend, which takes the 'labels' identified previously and assigning a shadow for nicer display
 plt.legend(shadow = True)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
 # Saving the figure in the scatterplot outputs folder
 plt.savefig('scatterplot_outputs/petal_length_v_petal_width', bbox_inches = 'tight')
 
@@ -629,6 +685,9 @@ plt.close()
 # ---------- Creating histograms for individual features ----------
 
 #region SL Histograms
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
 
 # ---------- Sepal Length ----------
 
@@ -654,7 +713,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # Source: edgecolour: (https://matplotlib.org/stable/api/figure_api.html)
 plt.hist(sepal_length, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/sepal_length', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -663,6 +725,9 @@ plt.close()
 #endregion 
 
 #region SW Histograms
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
 
 # ---------- Sepal Width ----------
 
@@ -688,7 +753,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # Source: # edgecolour: (https://matplotlib.org/stable/api/figure_api.html)
 plt.hist(sepal_width, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/sepal_width', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -697,6 +765,9 @@ plt.close()
 #endregion 
 
 #region PL Histograms
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
 
 # ---------- Petal Length ----------
 
@@ -721,7 +792,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using petal_length data, with 10 bins(or bars)
 plt.hist(petal_length, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/petal_length', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -730,6 +804,10 @@ plt.close()
 #endregion
 
 #region PL Histograms
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # ---------- Petal width ----------
 
 # Setting the title
@@ -753,7 +831,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using petal_width data, with 10 bins(or bars)
 plt.hist(petal_width, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/petal_width', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -762,6 +843,9 @@ plt.close()
 #endregion
 
 # region SL Species Hist
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
 
 # ---------- Creating histograms for individual features by species ----------
 
@@ -809,7 +893,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using sepal_length data, with 10 bins(or bars)
 plt.hist(species_sl, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/sepal_length_species_comparison', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -818,6 +905,9 @@ plt.close()
 #endregion 
 
 # region SW Species Hist
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
 
 # ---------- Sepal Width ----------
 
@@ -856,7 +946,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using sepal_width data, with 10 bins(or bars)
 plt.hist(species_sw, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/sepal_width_species_comparison', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -865,6 +958,10 @@ plt.close()
 #endregion 
 
 #region PL Species Hist
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
 # ---------- Petal Length ----------
 
 # to show the legend, this needs to be brought in as a sub plot
@@ -902,7 +999,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using petal_length data, with 10 bins(or bars)
 plt.hist(species_pl, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/petal_length_species_comparison', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -911,6 +1011,9 @@ plt.close()
 #endregion 
 
 #region PW Species Hist
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
 
 # ---------- Petal width ----------
 
@@ -949,7 +1052,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 # plotting the histogram using petal_width data, with 10 bins(or bars)
 plt.hist(species_pw, bins = 10, edgecolor = 'black', color = colours)
 
-# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the histogram outputs folder
 plt.savefig('histogram_outputs/petal_width_species_comparison', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
@@ -970,6 +1076,16 @@ plt.close()
 # 9) pdDataFrame: Geeksforgeeks (https://www.geeksforgeeks.org/how-to-make-a-table-in-python/#using-prettytable)
 # 10) dfround: Stack overflow (https://stackoverflow.com/questions/38255796/pandas-round-is-not-working-for-dataframe)
 # 11) Standard Deviation definition: Geeksforgeeks(https://www.geeksforgeeks.org/standard-deviation-formula/)
+# 12) loc and iloc: DataCamp (https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
+# 13) no background output text: Stack overflow (https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
+# 14) Plot Additions: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
+# 15) Boxplot label and colour: (Matplotlib (https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py)
+# 16) Fig size: How2Matplotlib (fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html)
+# 17) Linepoint: Matplotlib (https://matplotlib.org/stable/gallery/statistics/boxplot.html)
+# 18) Setting scatterplot colour: Python Examples (https://pythonexamples.org/matplotlib-scatter-plot-color/)
+# 19) Markers: Matplotlib (https://matplotlib.org/stable/api/markers_api.html)
+# 20) Saving figures: Stack overflow (https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it)
+# 21) Forward Slash when saving figure: DNM (https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/)
 
 # Setting the edgecolour: (https://matplotlib.org/stable/api/figure_api.html)
 
