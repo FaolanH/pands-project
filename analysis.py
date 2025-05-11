@@ -26,6 +26,8 @@ from sklearn.datasets import load_iris
 # bringing in mpatches allows the legend to be set easily
 import matplotlib.patches as mpatches
 
+from matplotlib import colors as mcolors
+
 # adding colours to scatterplots
 from matplotlib.colors import LinearSegmentedColormap, ListedColormap
 
@@ -229,6 +231,11 @@ features_file.close()
 # ---------- Dividing the features up to be used throughout the project ----------
 # Source: DataCamp, Intermediate Python, Dictionaries and Pandas Chapter, loc and iloc (https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
 
+# Species
+setosa = pd_iris_data.iloc[0:50, ]
+versicolor = pd_iris_data.iloc[50:100, ]
+virginica = pd_iris_data.iloc[100:150, ]
+
 # Sepal Length
 sepal_length = pd_iris_data.iloc[0:,0]
 setosa_sl = pd_iris_data.iloc[0:50,0]
@@ -426,9 +433,9 @@ plt.close()
 
 # Sepal Width Min and Max amounts
 
-x = (sepal_width)#, setosa_sw, versicolor_sw, virginica_sw)
-#y = (sw_min, setosa_sw_min, vs_sw_min, va_sw_min)
-y = (petal_length)#, setosa_pw, versicolor_pw, virginica_pw)
+x = pd_iris_data.iloc[0:,1]
+
+y = pd_iris_data.iloc[0:,3]
 
 # Setting the title
 plt.title("The sepal width versus petal width of the Iris flower samples")
@@ -446,13 +453,19 @@ plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "
 plt.yticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
 
 # setting the plot colours
-cmap = ListedColormap(['#819929', '#7c70cb'])#, '#632AC5', '#B9B0E7')
+
+c = ['#819929', '#7c70cb', '#632AC5']
+
+colours = {'setosa' : '#819929', 'versicolor': '#7c70cb', 'virginica':'#632AC5'}
+
+cmap=mcolors(["tab:#819929", "versicolor:#7c70cb", "virginica:#632AC5"])
+#cmap = LinearSegmentedColormap.from_list("CustomCmap", colours)
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the scatterplot using sepal_length data, with 10 bins (or bars)
-plt.scatter (x, y, marker = 's', cmap = cmap);
+plt.scatter (x, y, marker = 's', c = c);
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('scatterplot_outputs/sepal width v petal width', bbox_inches = 'tight')
