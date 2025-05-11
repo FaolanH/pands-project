@@ -226,6 +226,12 @@ summary_df['Standard Deviation'] = summary_df['Standard Deviation'].astype(float
 # Features_file
 features_file = open("features_file.txt", "w")
 features_file.write("This file is a summary of the four features: sepal length, sepal width, petal length and petal width data from the Iris dataset.")
+features_file.write(f'\nThere is a breakdown of each feature by four categories: total, setosa, versicolor and virginica.')
+features_file.write(f'\nPlease note that a divider dud column has been included to break down the sections e.g. Overall Data which is listed as 0.0 under each measurement')
+features_file.write(f'\nThere are five columns of measurement: Mean (the average), Median (the middle of the data), Minimum (the lowest figure), Maximum (the highest figure) and the Standard Deviation (How much variation there is in a set of data points)')
+features_file.write(f'\nSource for Standard Deviation definition: (https://www.geeksforgeeks.org/standard-deviation-formula/)')
+
+features_file.write(f'\n\nThe median, min and max of each variable is plotted on the boxplots, please see the boxplot_outputs folder.\n')
 features_file.write(f'\n\n{summary_df}')
 features_file.close()
 
