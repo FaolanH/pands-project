@@ -433,9 +433,26 @@ plt.close()
 
 # Sepal Width Min and Max amounts
 
-x = pd_iris_data.iloc[0:,1]
+x1 = setosa_sw
 
-y = pd_iris_data.iloc[0:,3]
+y1 = setosa_sl
+
+x2 = versicolor_sw
+
+y2 = versicolor_sl
+
+x3 = virginica_sw
+
+y3 = virginica_sl
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the scatterplot using sepal_length data, with 10 bins (or bars)
+# Source: https://pythonexamples.org/matplotlib-scatter-plot-color/
+plt.scatter (x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
+plt.scatter (x2, y2, marker = 'd', c = '#632AC5', label = 'Versicolor')
+plt.scatter (x3, y3,marker = '^', facecolor = '#B9B0E7', edgecolor = 'black',linewidth = '0', label = 'Virginica')
 
 # Setting the title
 plt.title("The sepal width versus petal width of the Iris flower samples")
@@ -444,31 +461,18 @@ plt.title("The sepal width versus petal width of the Iris flower samples")
 plt.xlabel ("Sepal width (in centimeters)")
 
 # setting the y axis label
-plt.ylabel ("Petal width (in centimeters)")
+plt.ylabel ("Sepal length (in centimeters)")
 
 # setting the xticks to show the cm for the sepal width
 plt.xticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
 
 # setting the yticks to show the cm for the petal width
-plt.yticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
+plt.yticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
 
-# setting the plot colours
-
-c = ['#819929', '#7c70cb', '#632AC5']
-
-colours = {'setosa' : '#819929', 'versicolor': '#7c70cb', 'virginica':'#632AC5'}
-
-cmap=mcolors(["tab:#819929", "versicolor:#7c70cb", "virginica:#632AC5"])
-#cmap = LinearSegmentedColormap.from_list("CustomCmap", colours)
-
-# setting a grid for context
-plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
-
-# plotting the scatterplot using sepal_length data, with 10 bins (or bars)
-plt.scatter (x, y, marker = 's', c = c);
+plt.legend(shadow = True)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
-plt.savefig('scatterplot_outputs/sepal width v petal width', bbox_inches = 'tight')
+plt.savefig('scatterplot_outputs/sepal length v sepal width', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it doesn't go onto the graph
 plt.close()
