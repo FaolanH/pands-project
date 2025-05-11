@@ -38,7 +38,7 @@ from tabulate import tabulate
 # Source: 2) Iris dataset
 pd_iris_data = pd.read_csv("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv")
 
-# Had to bring in the iris_data with the species as code name as they would not accept creating an array with a string
+# Had to bring in the iris_data with the species as code name as they would not accept creating an array with a string, used mainly for heatmaps
 iris_data = load_iris()
 
 #endregion
@@ -1085,6 +1085,17 @@ plt.close()
 
 #endregion
 
+# region Heatmap
+
+correlation = np.corrcoef(iris_data.data)
+
+print (correlation)
+#endregion
+
+# Pairplot
+
+#endregion
+
 # region References:
 
 # 1) Setting regions: Stack overflow (https://stackoverflow.com/questions/8265583/dividing-python-module-into-multiple-regions)
@@ -1113,7 +1124,6 @@ plt.close()
 # 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
 # 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries)
 # 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
-
 
 #endregion
 
