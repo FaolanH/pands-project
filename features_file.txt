@@ -2,7 +2,7 @@ This file is a summary of the four features: sepal length, sepal width, petal le
 There is a breakdown of each feature by four categories: total, setosa, versicolor and virginica.
 Please note that a divider dud column has been included to break down the sections e.g. Overall Data which is listed as 0.0 under each measurement
 There are five columns of measurement: Mean (the average), Median (the middle of the data), Minimum (the lowest figure), Maximum (the highest figure) and the Standard Deviation (How much variation there is in a set of data points)
-Source for Standard Deviation definition: (https://www.geeksforgeeks.org/standard-deviation-formula/)
+Source: 11) Standard Deviation definition: (https://www.geeksforgeeks.org/standard-deviation-formula/)
 
 The median, min and max of each variable is plotted on the boxplots, please see the boxplot_outputs folder.
 
