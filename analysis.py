@@ -92,6 +92,7 @@ pw_stdd = np.std(pd_iris_data['petal_width'])
 #end region
 
 # region Setosa Sum
+
 # Summary by species
 # Setosa
 
@@ -126,7 +127,9 @@ setosa_pl_stdd = np.std(pd_iris_data.iloc[0:50,2])
 setosa_pw_stdd = np.std(pd_iris_data.iloc[0:50,3])
 
 #endregion
+
 # region Versicolor
+
 # Summary by species
 # Versicolor
 
@@ -163,6 +166,7 @@ vs_pw_stdd = np.std(pd_iris_data.iloc[50:100,3])
 #endregion
 
 # region Virginica
+
 # Summary by species
 # Virginica
 
@@ -269,21 +273,24 @@ print(f'Petal Width is:\n{petal_width.to_string()}')
 '''
 #endregion
 
-# region Boxplot
+# region SL Boxplot
 
 # Setting the Sepal Length Boxplot
-# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
 # Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+
+# Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
 
-sl =(sepal_length, setosa_sl, versicolor_sl, virginica_sl)
+# Setting the sepal length data as one variable
+all_sl =(sepal_length, setosa_sl, versicolor_sl, virginica_sl)
 
 # Setting the labels
 labels = ['Overall Sepal Length', 'Setosa Sepal Length', 'Versicolor Sepal Length', 'Virginica Sepal Length']
 
-# For this one specifically, I did not need to assign the colours the species
+# For this one specifically, I did not need to assign the colours the species, just put in the colours I wanted
 colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
@@ -304,30 +311,37 @@ plt.grid(True)
 medianprops = dict(linewidth = 3, color = '#819929')
 
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot(sl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
+bplot = ax.boxplot(all_sl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
+# assigning the colour to the boxplot
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# saving the figure in the boxplot outputs named sepal_length_range
 plt.savefig('boxplot_outputs/sepal_length_range')
+
+# closing the plot to ensure it does not continue into other plots
 plt.close()
 
+#endregion
+
+# region SW Boxplot
 # Setting the Sepal Width Boxplot
-# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+
+#  Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
 
-setosa_sw = pd_iris_data.iloc[0:50,1]
-versicolor_sw = pd_iris_data.iloc[50:100,1]
-virginica_sw = pd_iris_data.iloc[100:150,1]
-
-sw =(sepal_width, setosa_sw, versicolor_sw, virginica_sw)
+# Setting the sepal width data as one variable
+all_sw =(sepal_width, setosa_sw, versicolor_sw, virginica_sw)
 
 # Setting the labels
 labels = ['Overall Sepal Width', 'Setosa Sepal Width', 'Versicolor Sepal Width', 'Virginica Sepal Width']
 
-# For this one specifically, I did not need to assign the colours the species
+# For this one specifically, I did not need to assign the colours the species, just put in the colours I wanted
 colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
@@ -348,30 +362,38 @@ plt.grid(True)
 medianprops = dict(linewidth = 3, color = '#819929')
 
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot(sw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
+bplot = ax.boxplot(all_sw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
+# assigning the colour to the boxplot
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# saving the figure in the boxplot outputs named sepal_width_range
 plt.savefig('boxplot_outputs/sepal_width_range')
+
+# closing the plot to ensure it does not continue into other plots
 plt.close()
 
+#endregion 
+
+# region PL Boxplot
+
 # Setting the Petal Length Boxplot
-# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+
+#  Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
 
-setosa_pl = pd_iris_data.iloc[0:50,2]
-versicolor_pl = pd_iris_data.iloc[50:100,2]
-virginica_pl = pd_iris_data.iloc[100:150,2]
-
-pl =(petal_length, setosa_pl, versicolor_pl, virginica_pl)
+# Setting the petal length data as one variable
+all_pl =(petal_length, setosa_pl, versicolor_pl, virginica_pl)
 
 # Setting the labels
 labels = ['Overall Petal Length', 'Setosa Petal Length', 'Versicolor Petal Length', 'Virginica Petal Length']
 
-# For this one specifically, I did not need to assign the colours the species
+# For this one specifically, I did not need to assign the colours the species, just put in the colours I wanted
 colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
@@ -392,30 +414,38 @@ plt.grid(True)
 medianprops = dict(linewidth = 3, color = '#819929')
 
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot(pl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
+bplot = ax.boxplot(all_pl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
+# assigning the colour to the boxplot
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# saving the figure in the boxplot outputs named petal_length_range
 plt.savefig('boxplot_outputs/petal_length_range')
+
+# closing the plot to ensure it does not continue into other plots
 plt.close()
 
+#endregion
+
+# region PW Boxplot
+
 # Setting the Petal Width Boxplot
-# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
+# I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense to show the range (mix -> max) and the median
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
+# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+
+# Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
 
-setosa_pw = pd_iris_data.iloc[0:50,3]
-versicolor_pw = pd_iris_data.iloc[50:100,3]
-virginica_pw = pd_iris_data.iloc[100:150,3]
-
-pw =(petal_width, setosa_pw, versicolor_pw, virginica_pw)
+# Setting the petal width data as one variable
+all_pw =(petal_width, setosa_pw, versicolor_pw, virginica_pw)
 
 # Setting the labels
 labels = ['Overall Petal Width', 'Setosa Petal Width', 'Versicolor Petal Width', 'Virginica Petal Width']
 
-# For this one specifically, I did not need to assign the colours the species
+# For this one specifically, I did not need to assign the colours the species, just put in the colours I wanted
 colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
@@ -436,68 +466,141 @@ plt.grid(True)
 medianprops = dict(linewidth = 3, color = '#819929')
 
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot(pw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
+bplot = ax.boxplot(all_pw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
+# assigning the colour to the boxplot
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
 
+# saving the figure in the boxplot outputs named petal_width_range
 plt.savefig('boxplot_outputs/petal_width_range')
+
+# closing the plot to ensure it does not continue into other plots
 plt.close()
 
 #endregion
 
-# region Scatterplot
-
-# I tried to do this scatterplot many ways: selecting all rows and just the sepal width or sepal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
+# region SW v SL Scatterplot
 
 # Sepal Width Length vs Sepal Width for each species
+
+# I tried to do this scatterplot many ways: selecting all rows and just the sepal width or sepal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
 
 # Setting the x for setosa sepal width(as defined in the 'Features' section)
 x1 = setosa_sw
 
+# Setting the y for setosa sepal length(as defined in the 'Features' section)
 y1 = setosa_sl
 
+# Setting the x for versicolor sepal width(as defined in the 'Features' section)
 x2 = versicolor_sw
 
+# Setting the y for versicolor sepal length(as defined in the 'Features' section)
 y2 = versicolor_sl
 
+# Setting the x for virginica sepal width(as defined in the 'Features' section)
 x3 = virginica_sw
 
+# Setting the y for virginica sepal length(as defined in the 'Features' section)
 y3 = virginica_sl
 
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the scatterplot using sepal_length data, with 10 bins(or bars)
+# plotting the scatterplot using sepal_length data
 # Source: https://pythonexamples.org/matplotlib-scatter-plot-color/
-#Source: https://matplotlib.org/stable/api/markers_api.html
+# Source: https://matplotlib.org/stable/api/markers_api.html
 plt.scatter(x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
 plt.scatter(x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
-plt.scatter(x3, y3,marker = '*', facecolor = '#B9B0E7', label = 'Virginica')
+plt.scatter(x3, y3,marker = '*', c = '#B9B0E7', label = 'Virginica')
 
 # Setting the title
-plt.title("The sepal width versus petal width of the Iris flower samples")
+plt.title("The sepal width versus sepal length of the Iris flower samples")
 
 # setting the x axis 
-plt.xlabel("Sepal width(in centimetres)")
+plt.xlabel("Sepal width (in centimetres)")
 
 # setting the y axis label
-plt.ylabel("Sepal length(in centimetres)")
+plt.ylabel("Sepal length (in centimetres)")
 
 # setting the xticks to show the cm for the sepal width
 plt.xticks([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
 
-# setting the yticks to show the cm for the petal width
+# setting the yticks to show the cm for the sepal length
 plt.yticks([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
 
+# showing the legend, which takes the 'labels' identified previously and assigning a shadow for nicer display
 plt.legend(shadow = True)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Saving the figure in the scatterplot outputs folder
 plt.savefig('scatterplot_outputs/sepal length v sepal width', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
 
+#endregion
+
+# region PW v PL Scatterplot
+
+# Petal Width Length vs petal Width for each species
+
+# I tried to do this scatterplot many ways: selecting all rows and just the petal width or petal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
+
+# Setting the x for setosa petal width(as defined in the 'Features' section)
+x1 = setosa_pw
+
+# Setting the y for setosa petal length(as defined in the 'Features' section)
+y1 = setosa_pl
+
+# Setting the x for versicolor petal width(as defined in the 'Features' section)
+x2 = versicolor_pw
+
+# Setting the y for versicolor petal length(as defined in the 'Features' section)
+y2 = versicolor_pl
+
+# Setting the x for virginica petal width(as defined in the 'Features' section)
+x3 = virginica_pw
+
+# Setting the y for virginica petal length(as defined in the 'Features' section)
+y3 = virginica_pl
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the scatterplot using petal_length data
+# Source: https://pythonexamples.org/matplotlib-scatter-plot-color/
+# Source: https://matplotlib.org/stable/api/markers_api.html
+plt.scatter(x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
+plt.scatter(x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
+plt.scatter(x3, y3,marker = '*', c = '#B9B0E7', label = 'Virginica')
+
+# Setting the title
+plt.title("The petal width versus petal length of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel("Petal width (in centimetres)")
+
+# setting the y axis label
+plt.ylabel("Petal length (in centimetres)")
+
+# setting the xticks to show the cm for the petal width
+plt.xticks([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
+
+# setting the yticks to show the cm for the petal length
+plt.yticks([1,2,3,4,5,6,7], ['1cm', '2cm', '3cm', '4cm', '5cm', '6cm', '7cm'])
+
+# showing the legend, which takes the 'labels' identified previously and assigning a shadow for nicer display
+plt.legend(shadow = True)
+
+# Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
+# Saving the figure in the scatterplot outputs folder
+plt.savefig('scatterplot_outputs/petal length v petal width', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it does not go onto the graph
+plt.close()
+
+#endregion
 
 #region Histograms
 
@@ -537,9 +640,6 @@ plt.close()
 
 # ---------- Sepal Width ----------
 
-# Setting the data location 0:150 sets all rows(0) up to but not including 150(aka 149). The ,1 that follows sets the column(sepal_width) and so on.
-sw = pd_iris_data.iloc[0:150,1]
-
 # Setting the title
 plt.title("The sepal width of the Iris flower samples")
 
@@ -559,7 +659,7 @@ colours =('#632AC5')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_width data, with 10 bins(or bars)
-plt.hist(sw, bins = 10, edgecolor = 'black', color = colours)
+plt.hist(sepal_width, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/sepal_width', bbox_inches = 'tight')
@@ -568,9 +668,6 @@ plt.savefig('histogram_outputs/sepal_width', bbox_inches = 'tight')
 plt.close()
 
 # ---------- Petal Length ----------
-
-# Setting the data location 0:150 sets all rows(0) up to but not including 150(aka 149). The ,2 that follows sets the column(petal_length) and so on.
-pl = pd_iris_data.iloc[0:150,2]
 
 # Setting the title
 plt.title("The petal length of the Iris flower samples")
@@ -591,7 +688,7 @@ colours =('#E1AD01')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using petal_length data, with 10 bins(or bars)
-plt.hist(pl, bins = 10, edgecolor = 'black', color = colours)
+plt.hist(petal_length, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/petal_length', bbox_inches = 'tight')
@@ -600,9 +697,6 @@ plt.savefig('histogram_outputs/petal_length', bbox_inches = 'tight')
 plt.close()
 
 # ---------- Petal width ----------
-
-# Setting the data location 0:150 sets all rows(0) up to but not including 150(aka 149). The ,3 that follows sets the column(petal_width) and so on.
-pw = pd_iris_data.iloc[0:150,3]
 
 # Setting the title
 plt.title("The petal width of the Iris flower samples")
@@ -623,7 +717,7 @@ colours =('#819929')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_length data, with 10 bins(or bars)
-plt.hist(pw, bins = 10, edgecolor = 'black', color = colours)
+plt.hist(petal_width, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
 plt.savefig('histogram_outputs/petal_width', bbox_inches = 'tight')
@@ -705,11 +799,6 @@ virginica = mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = '
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper left', shadow = True)
 
-# Setting the data location for each of the species: 0:50 sets the first row(0) up to but not including 50(aka 49) which is all the setosa data. The ,1 that follows sets the column(sepal width) and so on.
-setosa_sw = pd_iris_data.iloc[0:50,1]
-versicolor_sw = pd_iris_data.iloc[50:100,1]
-virginica_sw = pd_iris_data.iloc[100:150,1]
-
 # pulling all three together into one variable 
 sw =([setosa_sw, versicolor_sw, virginica_sw])
 
@@ -752,11 +841,6 @@ virginica = mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = '
 
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
-
-# Setting the data location for each of the species: 0:50 sets the first row(0) up to but not including 50(aka 49) which is all the setosa data. The ,1 that follows sets the column(sepal width)
-setosa_pl = pd_iris_data.iloc[0:50,2]
-versicolor_pl = pd_iris_data.iloc[50:100,2]
-virginica_pl = pd_iris_data.iloc[100:150,2]
 
 # pulling all three together into one variable
 pl =([setosa_pl, versicolor_pl, virginica_pl])
