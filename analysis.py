@@ -275,7 +275,8 @@ print (f'Petal Width is:\n{petal_width.to_string()}')
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-fig, ax = plt.subplots(figsize=(10, 6))
+# Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
+fig, ax = plt.subplots(figsize=(12, 8))
 
 sl = (sepal_length, setosa_sl, versicolor_sl, virginica_sl)
 
@@ -283,7 +284,7 @@ sl = (sepal_length, setosa_sl, versicolor_sl, virginica_sl)
 labels = ['Overall Sepal Length', 'Setosa Sepal Length', 'Versicolor Sepal Length', 'Virginica Sepal Length']
 
 # For this one specifically, I did not need to assign the colours the species
-colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
 plt.yticks ([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
@@ -298,8 +299,12 @@ plt.ylabel ('Sepal Length')
 # Setting a background grid for more clarity
 plt.grid(True)
 
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this (https://matplotlib.org/stable/gallery/statistics/boxplot.html)
+# Source: linestyele - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+medianprops = dict(linewidth = 3, color = '#819929')
+
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot (sl, tick_labels = labels, patch_artist=True);
+bplot = ax.boxplot (sl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
@@ -311,7 +316,7 @@ plt.close()
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(12, 8))
 
 setosa_sw = pd_iris_data.iloc[0:50,1]
 versicolor_sw = pd_iris_data.iloc[50:100,1]
@@ -323,7 +328,7 @@ sw = (sepal_width, setosa_sw, versicolor_sw, virginica_sw)
 labels = ['Overall Sepal Width', 'Setosa Sepal Width', 'Versicolor Sepal Width', 'Virginica Sepal Width']
 
 # For this one specifically, I did not need to assign the colours the species
-colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
 plt.yticks ([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
@@ -338,8 +343,12 @@ plt.ylabel ('Sepal Width')
 # Setting a background grid for more clarity
 plt.grid(True)
 
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this (https://matplotlib.org/stable/gallery/statistics/boxplot.html)
+# Source: linestyele - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+medianprops = dict(linewidth = 3, color = '#819929')
+
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot (sw, tick_labels = labels, patch_artist=True);
+bplot = ax.boxplot (sw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
@@ -351,7 +360,7 @@ plt.close()
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(12, 8))
 
 setosa_pl = pd_iris_data.iloc[0:50,2]
 versicolor_pl = pd_iris_data.iloc[50:100,2]
@@ -363,7 +372,7 @@ pl = (petal_length, setosa_pl, versicolor_pl, virginica_pl)
 labels = ['Overall Petal Length', 'Setosa Petal Length', 'Versicolor Petal Length', 'Virginica Petal Length']
 
 # For this one specifically, I did not need to assign the colours the species
-colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
 plt.yticks ([1,2,3,4,5,6,7], ['1cm', '2cm', '3cm', '4cm', '5cm', '6cm', '7cm'])
@@ -378,8 +387,12 @@ plt.ylabel ('Petal Length')
 # Setting a background grid for more clarity
 plt.grid(True)
 
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this (https://matplotlib.org/stable/gallery/statistics/boxplot.html)
+# Source: linestyele - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+medianprops = dict(linewidth = 3, color = '#819929')
+
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot (pl, tick_labels = labels, patch_artist=True);
+bplot = ax.boxplot (pl, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
@@ -391,7 +404,7 @@ plt.close()
 # I initially attempted to plot the min to max range using a scatterplot then a histogram but no joy. A box plot makes more sense as the show the range
 
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(12, 8))
 
 setosa_pw = pd_iris_data.iloc[0:50,3]
 versicolor_pw = pd_iris_data.iloc[50:100,3]
@@ -403,7 +416,7 @@ pw = (petal_width, setosa_pw, versicolor_pw, virginica_pw)
 labels = ['Overall Petal Width', 'Setosa Petal Width', 'Versicolor Petal Width', 'Virginica Petal Width']
 
 # For this one specifically, I did not need to assign the colours the species
-colours = ['#819929', '#7c70cb', '#632AC5', '#B9B0E7']
+colours = ['#E1AD01', '#7c70cb', '#632AC5', '#B9B0E7']
 
 # y tick labels
 plt.yticks ([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
@@ -418,8 +431,12 @@ plt.ylabel ('Petal Width')
 # Setting a background grid for more clarity
 plt.grid(True)
 
+# I wanted to change the colour and style of the median line point, used the matplotlib boxplot documentation for this (https://matplotlib.org/stable/gallery/statistics/boxplot.html)
+# Source: linestyele - https://matplotlib.org/stable/gallery/lines_bars_and_markers/linestyles.html
+medianprops = dict(linewidth = 3, color = '#819929')
+
 # as referenced above, I learned the below method for assigning colours on the matplotlib gallery
-bplot = ax.boxplot (pw, tick_labels = labels, patch_artist=True);
+bplot = ax.boxplot (pw, tick_labels = labels, patch_artist=True, medianprops=medianprops);
 
 for patch, color in zip(bplot['boxes'], colours):
     patch.set_facecolor(color)
@@ -431,8 +448,11 @@ plt.close()
 
 # region Scatterplot
 
-# Sepal Width Min and Max amounts
+# I tried to do this scatterplot mayn ways: selecting all rows and just the sepal width or sepal length column etc. In the end, I found a great source that solved my colour issue (I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
 
+# Sepal Width Length vs Sepal Width for each species
+
+# Setting the x for setosa sepal width (as defined in the 'Features' section)
 x1 = setosa_sw
 
 y1 = setosa_sl
@@ -450,9 +470,10 @@ plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the scatterplot using sepal_length data, with 10 bins (or bars)
 # Source: https://pythonexamples.org/matplotlib-scatter-plot-color/
+#Source: https://matplotlib.org/stable/api/markers_api.html
 plt.scatter (x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
-plt.scatter (x2, y2, marker = 'd', c = '#632AC5', label = 'Versicolor')
-plt.scatter (x3, y3,marker = '^', facecolor = '#B9B0E7', edgecolor = 'black',linewidth = '0', label = 'Virginica')
+plt.scatter (x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
+plt.scatter (x3, y3,marker = '*', facecolor = '#B9B0E7', label = 'Virginica')
 
 # Setting the title
 plt.title("The sepal width versus petal width of the Iris flower samples")
