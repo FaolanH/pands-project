@@ -332,7 +332,7 @@ plt.close()
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
 # Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
 
-#  Setting the plot and figure size
+# Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
 
 # Setting the sepal width data as one variable
@@ -384,7 +384,7 @@ plt.close()
 # This example on matplotlib was very useful, especially in adding in the axis labels and setting colours https://matplotlib.org/stable/gallery/statistics/boxplot_color.html#sphx-glr-gallery-statistics-boxplot-color-py
 # Source: fig size: https://how2matplotlib.com/matplotlib-boxplot-x-axis-label.html
 
-#  Setting the plot and figure size
+#Setting the plot and figure size
 fig, ax = plt.subplots(figsize=(12, 8))
 
 # Setting the petal length data as one variable
@@ -612,7 +612,7 @@ plt.close()
 plt.title("The sepal length of the Iris flower samples")
 
 # setting the x axis 
-plt.xlabel("Sepal length(in centimetres)")
+plt.xlabel("Sepal length (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples")
@@ -645,7 +645,7 @@ plt.close()
 plt.title("The sepal width of the Iris flower samples")
 
 # setting the x axis 
-plt.xlabel("Sepal width(in centimetres)")
+plt.xlabel("Sepal width (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples")
@@ -678,7 +678,7 @@ plt.close()
 plt.title("The petal length of the Iris flower samples")
 
 # setting the x axis 
-plt.xlabel("Petal length(in centimetres)")
+plt.xlabel("Petal length (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples")
@@ -710,7 +710,7 @@ plt.close()
 plt.title("The petal width of the Iris flower samples")
 
 # setting the x axis 
-plt.xlabel("Petal Width(in centimetres)")
+plt.xlabel("Petal Width (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples")
@@ -724,7 +724,7 @@ colours =('#819929')
 # setting a grid for context
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
-# plotting the histogram using sepal_length data, with 10 bins(or bars)
+# plotting the histogram using petal_width data, with 10 bins(or bars)
 plt.hist(petal_width, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/
@@ -766,7 +766,7 @@ species_sl =([setosa_sl, versicolor_sl, virginica_sl])
 plt.title("The sepal length of the Iris flower samples by species")
 
 # setting the x axis 
-plt.xlabel("Sepal length(in centimetres)")
+plt.xlabel("Sepal length (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples per species")
@@ -813,7 +813,7 @@ species_sw =([setosa_sw, versicolor_sw, virginica_sw])
 plt.title("The sepal width of the Iris flower samples by species")
 
 # setting the x axis 
-plt.xlabel("Sepal width(in centimetres)")
+plt.xlabel("Sepal width (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples per species")
@@ -859,7 +859,7 @@ species_pl =([setosa_pl, versicolor_pl, virginica_pl])
 plt.title("The petal length of the Iris flower samples by species")
 
 # setting the x axis 
-plt.xlabel("Petal length(in centimetres)")
+plt.xlabel("Petal length (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples per species")
@@ -906,7 +906,7 @@ species_pw =([setosa_pw, versicolor_pw, virginica_pw])
 plt.title("The petal width of the Iris flower samples by species")
 
 # setting the x axis 
-plt.xlabel("Petal Width(in centimetres)")
+plt.xlabel("Petal Width (in centimetres)")
 
 # setting the y axis label
 plt.ylabel("Number of samples per species")
