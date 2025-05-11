@@ -602,9 +602,9 @@ plt.close()
 
 #endregion
 
-#region Histograms
-
 # ---------- Creating histograms for individual features ----------
+
+#region SL Histograms
 
 # ---------- Sepal Length ----------
 
@@ -635,6 +635,10 @@ plt.savefig('histogram_outputs/sepal_length', bbox_inches = 'tight')
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
 
+#endregion 
+
+#region SW Histograms
+
 # ---------- Sepal Width ----------
 
 # Setting the title
@@ -663,6 +667,10 @@ plt.savefig('histogram_outputs/sepal_width', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
+
+#endregion 
+
+#region PL Histograms
 
 # ---------- Petal Length ----------
 
@@ -693,6 +701,9 @@ plt.savefig('histogram_outputs/petal_length', bbox_inches = 'tight')
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
 
+#endregion
+
+#region PL Histograms
 # ---------- Petal width ----------
 
 # Setting the title
@@ -724,7 +735,7 @@ plt.close()
 
 #endregion
 
-# region Hist Species
+# region SL Species Hist
 
 # ---------- Creating histograms for individual features by species ----------
 
@@ -778,6 +789,10 @@ plt.savefig('histogram_outputs/sepal_length_species_comparison', bbox_inches = '
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
 
+#endregion 
+
+# region SW Species Hist
+
 # ---------- Sepal Width ----------
 
 # to show the legend, this needs to be brought in as a sub plot
@@ -821,6 +836,9 @@ plt.savefig('histogram_outputs/sepal_width_species_comparison', bbox_inches = 't
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
 
+#endregion 
+
+#region PL Species Hist
 # ---------- Petal Length ----------
 
 # to show the legend, this needs to be brought in as a sub plot
@@ -863,6 +881,10 @@ plt.savefig('histogram_outputs/petal_length_species_comparison', bbox_inches = '
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
+
+#endregion 
+
+#region PW Species Hist
 
 # ---------- Petal width ----------
 
