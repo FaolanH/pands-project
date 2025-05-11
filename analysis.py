@@ -710,7 +710,7 @@ colours =('#7c70cb')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_length data, with 10 bins(or bars)
-# Source: edgecolour: (https://matplotlib.org/stable/api/figure_api.html)
+# Source: 22) Setting the edgecolour
 plt.hist(sepal_length, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -750,7 +750,7 @@ colours =('#632AC5')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_width data, with 10 bins(or bars)
-# Source: # edgecolour: (https://matplotlib.org/stable/api/figure_api.html)
+# Source: 22) Setting the edgecolour
 plt.hist(sepal_width, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -790,6 +790,7 @@ colours =('#E1AD01')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using petal_length data, with 10 bins(or bars)
+# Source: 22) Setting the edgecolour
 plt.hist(petal_length, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -829,6 +830,7 @@ colours =('#819929')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using petal_width data, with 10 bins(or bars)
+# Source: 22) Setting the edgecolour
 plt.hist(petal_width, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -849,23 +851,24 @@ plt.close()
 
 # ---------- Creating histograms for individual features by species ----------
 
-# Source: DataCamp, Intermediate Python, Chapter Matplotlib(https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
-
 # Attempting to plot three bars on one histogram - I originally attempted to do this with the pd_iris_data but then thought because the species name was a string not a float, I could not create the array I needed to plot all three on the one! It turned out I did not need to create a numpy array at all and ended up not using that dataset for this.
-# Source: https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html
-# Source: https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries
-# Source: https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it
+# Source: 24) Assigning hist colours
 
 # ---------- Sepal Length ----------
+
+# Source: 23) Chapter Matplotlib
 
 # to show the legend, this needs to be brought in as a sub plot
 fig, ax = plt.subplots()
  
 # Setting the legend styles for each variable
+# Source: 22) Setting the edgecolour
+# Source: 26) patches
 setosa = mpatches.Patch(facecolor = '#7c70cb', edgecolor = 'black', label = 'Setosa')
 versicolor = mpatches.Patch(facecolor = '#632AC5', edgecolor = 'black', label = 'Versicolor')
 virginica = mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 'Virginica')
 
+# Source: 25) Legend Styling
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
 
@@ -891,6 +894,7 @@ colours =('#7c70cb', '#632AC5', '#B9B0E7')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_length data, with 10 bins(or bars)
+# Source: 22) Setting the edgecolour
 plt.hist(species_sl, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -911,14 +915,19 @@ plt.close()
 
 # ---------- Sepal Width ----------
 
+# Source: 23) Chapter Matplotlib
+
 # to show the legend, this needs to be brought in as a sub plot
 fig, ax = plt.subplots()
  
 # Setting the legend styles for each variable
+# Source: 22) Setting the edgecolour
+# Source: 26) patches
 setosa = mpatches.Patch(facecolor = '#7c70cb', edgecolor = 'black', label = 'Setosa')
 versicolor = mpatches.Patch(facecolor = '#632AC5', edgecolor = 'black', label = 'Versicolor')
 virginica = mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 'Virginica')
 
+# Source: 25) Legend Styling
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper left', shadow = True)
 
@@ -944,6 +953,7 @@ colours =('#7c70cb', '#632AC5', '#B9B0E7')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using sepal_width data, with 10 bins(or bars)
+# Source: 22) Setting the edgecolour
 plt.hist(species_sw, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -964,14 +974,19 @@ plt.close()
 
 # ---------- Petal Length ----------
 
+# Source: 23) Chapter Matplotlib
+
 # to show the legend, this needs to be brought in as a sub plot
 fig, ax = plt.subplots()
  
 # Setting the legend styles for each variable
+# Source: 22) Setting the edgecolour
+# Source: 26) patches
 setosa = mpatches.Patch(facecolor = '#7c70cb', edgecolor = 'black', label = 'Setosa')
 versicolor = mpatches.Patch(facecolor = '#632AC5', edgecolor = 'black', label = 'Versicolor')
 virginica = mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 'Virginica')
 
+# Source: 25) Legend Styling
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
 
@@ -997,6 +1012,7 @@ colours =('#7c70cb', '#632AC5', '#B9B0E7')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using petal_length data, with 10 bins(or bars)
+# Source: 22) Setting the edgecolour
 plt.hist(species_pl, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -1017,14 +1033,19 @@ plt.close()
 
 # ---------- Petal width ----------
 
+# Source: 23) Chapter Matplotlib
+
 # to show the legend, this needs to be brought in as a sub plot
 fig, ax = plt.subplots()
  
 # Setting the legend styles for each variable
+# Source: 22) Setting the edgecolour
+# Source: 26) patches
 setosa = mpatches.Patch(facecolor = '#7c70cb', edgecolor = 'black', label = 'Setosa')
 versicolor = mpatches.Patch(facecolor = '#632AC5', edgecolor = 'black', label = 'Versicolor')
 virginica = mpatches.Patch(facecolor = '#B9B0E7', edgecolor = 'black', label = 'Virginica')
 
+# Source: 25) Legend Styling
 # plotting the legend
 ax.legend(handles=[setosa, versicolor, virginica], loc = 'upper right', shadow = True)
 
@@ -1050,6 +1071,7 @@ colours =('#7c70cb', '#632AC5', '#B9B0E7')
 plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
 
 # plotting the histogram using petal_width data, with 10 bins(or bars)
+# Source: 22) Setting the edgecolour
 plt.hist(species_pw, bins = 10, edgecolor = 'black', color = colours)
 
 # Source: 20) Saving figures
@@ -1086,8 +1108,12 @@ plt.close()
 # 19) Markers: Matplotlib (https://matplotlib.org/stable/api/markers_api.html)
 # 20) Saving figures: Stack overflow (https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it)
 # 21) Forward Slash when saving figure: DNM (https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/)
+# 22) Setting the edgecolour: Matplotlib (https://matplotlib.org/stable/api/figure_api.html)
+# 23) Chapter Matplotlib: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
+# 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
+# 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries)
+# 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
 
-# Setting the edgecolour: (https://matplotlib.org/stable/api/figure_api.html)
 
 #endregion
 
