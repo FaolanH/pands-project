@@ -30,7 +30,14 @@
 ##### With the modules imported and the data set, in this section I began plotting the data onto boxplots. Here, it was a comparison of the three species and the overall dataset for each feature, with four boxplots saved into the boxplot_outputs folder. This is an important plot to visualise the minimum, maximum and median figure for each feature, which visualizes the data described in the features_file.txt
 #### Scatterplots
 ##### For the scatterplots, I showed the comparison between the sepal width and sepal length, sepal width and petal width, petal width and petal length and sepal length and petal length. I think this mixture of analysis and point plotting is interesting in seeing where the different species lie, with clear overlap for some features and distance in others. The outputs of this are saved in the scatterplot folder
-####
+#### Histograms
+##### I used histograms to compare species features across the species and features as a whole. These are useful plots to see the data in a bar format, to compare bins and show how many samples fit into each range. There are eight histogram plots in the histograms outputs folder.
+#### Heatmap
+##### I created a heatmap of the entire iris data set, which used the iris.data format as they did not accept the string format used for the species in the pd_iris_data. This heatmap displays each row of data and shows the correlations between the features. This can viewed in the heatmap_outputs folder
+#### Pairplot
+##### I created a pairplot of the features using seaborn, which outputs 16 plots comparing the three species across teh features. It is very usedul to see them side by side for visual comparison. This can be viewed in the pairplot_outputs section
+#### References
+##### The final section of this script is the references section. Throughout the notebook, there are comments with the Source number and title to find where the structure/data came from. This is also available to view in the references section at the bottom of this README
 
 
 ## Iris Dataset
