@@ -101,11 +101,7 @@ Source: K)
 #### J) Signal Yellow Hex Code: Colorhexa (https://www.colorhexa.com/e1ad01)
 #### K) Stem Green Hex Code: Colorhexa (https://www.colorhexa.com/819929)
 
-<<<<<<< HEAD
 ### Documentation for packages used:
-=======
-![image](https://github.com/user-attachments/assets/65aea040-18d3-439c-83e7-46d5f5809a5f)
->>>>>>> 74afc7ebe44010ee7b0fd37408bcc36241207a91
 
 #### 0.1) Numpy - https://numpy.org/doc/
 #### 0.2) Pandas - https://pandas.pydata.org/docs/
