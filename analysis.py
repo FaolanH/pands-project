@@ -26,13 +26,8 @@ from sklearn.datasets import load_iris
 # bringing in mpatches allows the legend to be set easily
 import matplotlib.patches as mpatches
 
-from matplotlib import colors as mcolors
-
 # adding colours to scatterplots
 from matplotlib.colors import LinearSegmentedColormap, ListedColormap
-
-# shows the output as a table
-from tabulate import tabulate
 
 # ---------- Importing the iris dataset through pandas, the species names can be called directly ----------
 # Source: 2) Iris dataset
