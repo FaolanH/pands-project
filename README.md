@@ -3,9 +3,9 @@
 # Project for the Programming and Scripting module
 
 ## Interacting with this project
-### Welcome to this repository!  In this project I will look at what is possible through Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
+### Welcome to this repository!  In this project I will look at what is possible through Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. While it is a specific dataset being analysed, the methods used throughout are applicable with other datasets.
 
-### This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend one of two options: opening codespaces on this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. The other option would be opening this on VSCode to easily flick between the different sections of the code, to do this please navigate to the download section through the three dots to the top right of the analysis.py file and open file in VSCode. Please note there will be no output in the terminal (other than a message guiding you to the output folders and txt file).
+### This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend one of two options: opening codespaces on this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. The other option would be opening this on VSCode to easily flick between the different sections of the code; to do this please navigate to the download section through the three dots to the top right of the analysis.py file and open file in VSCode. Please note there will be no output in the terminal (other than a message guiding you to the output folders and txt file).
 
 ![image](https://github.com/user-attachments/assets/df0b916a-1b4c-4c10-ad7d-6f9fbd4714eb)
 
@@ -23,28 +23,27 @@
 #### Importing in the two versions of the iris dataset
 ##### I used the pandas DataFrame for the vast majority of the work in this notebook, the only instance where I used the load.iris() package (from sklearn.dataset) is for the heatmap
 #### Creating a summary txt file 
-##### Initially, I set all the analysis by calling on the data location and using numpy fuctions (np.mean, np.median, np.min, np.max, np.std). I did this for the dataset as a whole for each feature and then for each feature by species. I then created a summary DataFrame with all this information to display it neatly in the txt. file (which is output separately in the repository as features_file.txt)
+##### Initially, I set all the analysis by calling on the data location and using numpy functions (np.mean, np.median, np.min, np.max, np.std). I did this for the dataset as a whole for each feature and then for each feature by species. I then created a summary DataFrame with all this information to display it neatly in the txt. file (which is output separately in the repository as features_file.txt)
 #### Setting the features
 ##### In this section I set the features and species into variable that are used throughout the notebook. 
 #### Boxplots
-##### With the modules imported and the data set, in this section I began plotting the data onto boxplots. Here, it was a comparison of the three species and the overall dataset for each feature, with four boxplots saved into the boxplot_outputs folder. This is an important plot to visualise the minimum, maximum and median figure for each feature, which visualizes the data described in the features_file.txt
+##### With the modules imported and the data set, in this section I began plotting the data onto boxplots. Here, it was a comparison of the three species and the overall dataset for each feature, with four boxplots saved into the boxplot_outputs folder. This is an important plot to visualize the minimum, maximum and median figure for each feature, which visualizes the data described in the features_file.txt
 #### Scatterplots
 ##### For the scatterplots, I showed the comparison between the sepal width and sepal length, sepal width and petal width, petal width and petal length and sepal length and petal length. I think this mixture of analysis and point plotting is interesting in seeing where the different species lie, with clear overlap for some features and distance in others. The outputs of this are saved in the scatterplot folder
 #### Histograms
 ##### I used histograms to compare species features across the species and features as a whole. These are useful plots to see the data in a bar format, to compare bins and show how many samples fit into each range. There are eight histogram plots in the histograms outputs folder.
 #### Heatmap
-##### I created a heatmap of the entire iris data set, which used the iris.data format as they did not accept the string format used for the species in the pd_iris_data. This heatmap displays each row of data and shows the correlations between the features. This can viewed in the heatmap_outputs folder
+##### I created a heatmap of the entire iris data set, which used the iris.data format as they did not accept the string format used for the species in the pd_iris_data. This heatmap displays each row of data and shows the correlations between the features. This can be viewed in the heatmap_outputs folder
 #### Pairplot
-##### I created a pairplot of the features using seaborn, which outputs 16 plots comparing the three species across teh features. It is very usedul to see them side by side for visual comparison. This can be viewed in the pairplot_outputs section
+##### I created a pairplot of the features using seaborn, which outputs 16 plots comparing the three species across the features. It is very useful to see them side by side for visual comparison. This can be viewed in the pairplot_outputs section
 #### References
 ##### The final section of this script is the references section. Throughout the notebook, there are comments with the Source number and title to find where the structure/data came from. This is also available to view in the references section at the bottom of this README
 
-
 ## Iris Dataset
 The Fisher's Iris dataset contains 150 rows and 4 columns of data, looking at 150 samples taken from three species of iris: setosa, versicolor and virginica. These samples are measured by four features: sepal width, sepal length, petal width and petal length. There is some interesting context on the background for this dataset and possible uses (Source: L) Iris Dataset Info)
-To see the actual data in the iris dataset, please see the Iris_data_folder for more details (Source: M) Iris Dataset Literal
+To see the actual data in the iris dataset, please see the iris_data_folder for more details (Source: M) Iris Dataset Literal
 
-### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualise what it is that I am discussing. The imagery shows the differences between the three species used in this dataset. 
+### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualize what it is that I am discussing. The imagery shows the differences between the three species used in this dataset. 
 
 #### Source: A)
 ![image](https://github.com/user-attachments/assets/137215fd-8540-4511-9c81-c5832036b93a)
@@ -58,7 +57,7 @@ To see the actual data in the iris dataset, please see the Iris_data_folder for 
   ##### - plotting the data on histograms/boxplots, comparing the species or across one specific species e.g. comparing petal length across setosa, versicolor and virginica or showing the range of petal length (min to max) in one species
   ###### - This analysis can be viewed in the various output folders seen in this repository (histogram_outputs, boxplot_outputs, scatterplot_outputs, heatmap_outputs and pairplot_outputs). 
   ##### - what libraries are available to help me display this data?
-  ###### - As listed in the references section, I used a series of libraries and packages to help me visualise this data: numpy, pandas, matplotlib, seaborn and sklearn.dataset
+  ###### - As listed in the references section, I used a series of libraries and packages to help me visualize this data: numpy, pandas, matplotlib, seaborn and sklearn.dataset
   ##### - can I use user input to ask the user what they want to see?
   ###### - Unfortunately, I did not get to investigate this element of the project, which would be interesting to consider for future projects
   ##### - investigate the pandas read.csv to see what can be done
