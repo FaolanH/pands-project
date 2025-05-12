@@ -7,7 +7,7 @@
 ### Show the parts of the iris the data refers to "sepal", "petal", diagrams for each species
 
 #### Source: A)
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/137215fd-8540-4511-9c81-c5832036b93a)
 
 #### Project Plan
 #### This was the initial plan I set out when beginning this project, I will go through each statement and discuss it
