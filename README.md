@@ -138,3 +138,4 @@ Source: K)
 #### 23) Chapter Matplotlib: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
 #### 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
 #### 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html####controlling-the-legend-ent
+#### 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
