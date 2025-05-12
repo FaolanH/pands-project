@@ -553,7 +553,7 @@ plt.close()
 # The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
 # Source: 14) Plot Additions
 
-# Sepal Width Length vs Sepal Width for each species
+# Sepal Width vs Sepal Width for each species
 
 # I tried to do this scatterplot many ways: selecting all rows and just the sepal width or sepal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
 # Source: 18) Setting scatterplot colour
@@ -615,12 +615,79 @@ plt.close()
 
 #endregion
 
+# region SW v PW Scatterplot
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
+# Sepal Width vs Petal Width for each species
+
+# I tried to do this scatterplot many ways: selecting all rows and just the sepal width or petal width column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
+# Source: 18) Setting scatterplot colour
+
+# Setting the x for setosa sepal width(as defined in the 'Features' section)
+x1 = setosa_sw
+
+# Setting the y for setosa petal width(as defined in the 'Features' section)
+y1 = setosa_pw
+
+# Setting the x for versicolor sepal width(as defined in the 'Features' section)
+x2 = versicolor_sw
+
+# Setting the y for versicolor petal width(as defined in the 'Features' section)
+y2 = versicolor_pw
+
+# Setting the x for virginica sepal width(as defined in the 'Features' section)
+x3 = virginica_sw
+
+# Setting the y for virginica petal width(as defined in the 'Features' section)
+y3 = virginica_pw
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the scatterplot using petal_width data
+# Source: 18) Setting scatterplot colour
+# Source: 19) Markers
+plt.scatter(x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
+plt.scatter(x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
+plt.scatter(x3, y3,marker = '*', c = '#B9B0E7', label = 'Virginica')
+
+# Setting the title
+plt.title("The sepal width versus petal width of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel("Sepal width (in centimetres)")
+
+# setting the y axis label
+plt.ylabel("Petal width (in centimetres)")
+
+# setting the xticks to show the cm for the sepal width
+plt.xticks([2.0,2.5,3.0,3.5,4.0,4.5], ["2cm", "2.5cm", "3cm", "3.5cm", "4cm", "4.5cm"])
+
+# setting the yticks to show the cm for the petal width
+plt.yticks([0.5,1,1.5,2,2.5], ["0.5cm", "1cm", "1.5cm", "2cm", "2.5cm"])
+
+# showing the legend, which takes the 'labels' identified previously and assigning a shadow for nicer display
+plt.legend(shadow = True)
+
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the scatterplot outputs folder
+plt.savefig('scatterplot_outputs/sepal_width_v_petal_width', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it does not go onto the graph
+plt.close()
+
+#endregion
+
 # region PW v PL Scatterplot
 
 # The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
 # Source: 14) Plot Additions
 
-# Petal Width Length vs petal Width for each species
+# Petal Length vs Petal Width for each species
 
 # I tried to do this scatterplot many ways: selecting all rows and just the petal width or petal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
 # Source: 18) Setting scatterplot colour
@@ -676,6 +743,71 @@ plt.legend(shadow = True)
 # Source: 21) Forward Slash when saving figure
 # Saving the figure in the scatterplot outputs folder
 plt.savefig('scatterplot_outputs/petal_length_v_petal_width', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it does not go onto the graph
+plt.close()
+
+# region SL v PL Scatterplot
+
+# The additions (adding in tick marks, labels, titles etc.) of most plots throughout this notebook is inspired from DataCamp
+# Source: 14) Plot Additions
+
+# Petal Length vs sepal length for each species
+
+# I tried to do this scatterplot many ways: selecting all rows and just the sepal length or petal length column etc. In the end, I found a great source that solved my colour issue(I had trouble assigning colours I chose to the variables) and also helped to breakdown the data.
+# Source: 18) Setting scatterplot colour
+
+# Setting the x for setosa sepal length(as defined in the 'Features' section)
+x1 = setosa_sl
+
+# Setting the y for setosa petal length(as defined in the 'Features' section)
+y1 = setosa_pl
+
+# Setting the x for versicolor sepal length(as defined in the 'Features' section)
+x2 = versicolor_sl
+
+# Setting the y for versicolor petal length(as defined in the 'Features' section)
+y2 = versicolor_pl
+
+# Setting the x for virginica sepal length(as defined in the 'Features' section)
+x3 = virginica_sl
+
+# Setting the y for virginica petal length(as defined in the 'Features' section)
+y3 = virginica_pl
+
+# setting a grid for context
+plt.grid(linewidth = 0.5, c = 'grey', alpha = 0.2)
+
+# plotting the scatterplot using petal_length data
+# Source: 18) Setting scatterplot colour
+# Source: 19) Markers
+plt.scatter(x1, y1, marker = '*', c = '#7c70cb', label = 'Setosa')
+plt.scatter(x2, y2, marker = '*', c = '#632AC5', label = 'Versicolor')
+plt.scatter(x3, y3,marker = '*', c = '#B9B0E7', label = 'Virginica')
+
+# Setting the title
+plt.title("The sepal length versus petal length of the Iris flower samples")
+
+# setting the x axis 
+plt.xlabel("Sepal Length (in centimetres)")
+
+# setting the y axis label
+plt.ylabel("Petal length (in centimetres)")
+
+# setting the xticks to show the cm for the sepal length
+plt.xticks([4.5,5.0,5.5,6.0,6.5,7.0,7.5, 8.0], ["4.5cm", "5cm", "5.5cm", "6cm", "6.5cm", "7cm", "7.5cm", "8cm"])
+
+# setting the yticks to show the cm for the petal length
+plt.yticks([1,2,3,4,5,6,7], ['1cm', '2cm', '3cm', '4cm', '5cm', '6cm', '7cm'])
+
+# showing the legend, which takes the 'labels' identified previously and assigning a shadow for nicer display
+plt.legend(shadow = True)
+
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the scatterplot outputs folder
+plt.savefig('scatterplot_outputs/petal_length_v_sepal_length', bbox_inches = 'tight')
 
 # ensures the plot is closed when running off the next plot so it does not go onto the graph
 plt.close()
