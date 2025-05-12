@@ -1,4 +1,5 @@
 # pands-project
+# Author: Faolán Hamilton
 ## Project for the Programming and Scripting module
 ### In this project I will look at the possibilites of using Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
 
@@ -52,6 +53,10 @@ Souce: https://www.gardenia.net/plant/iris-virginica-var-shrevei
 
 ### HEX Code: #E1AD01
 
+![alt text](image.png)
+
+Source: Signal identification (https://www.fs.usda.gov/wildflowers/beauty/iris/flower.shtml)
+
 ![image](https://github.com/user-attachments/assets/4a8de5db-dab1-4530-ad92-6a3d74e2f1f7)
 
 Source: https://www.colorhexa.com/e1ad01
@@ -67,6 +72,10 @@ Source: https://www.colorhexa.com/e1ad01
 
 #### Iris Dataset
 ### Show the parts of the iris the data refers to "sepal", "petal", diagrams for each species
+
+![alt text](image-2.png)
+
+(https://machinelearning4ya.blogspot.com/2022/04/iris-flowers-classification-using.html)
 
 #### Project Plan
 ##### - Describe the iris dataset briefly, and how other data might have similar structure
