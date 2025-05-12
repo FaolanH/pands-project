@@ -13,7 +13,7 @@
 
 ## Project Plan
 ### This was the initial plan I set out when beginning this project, I will go through each statement and discuss it
-#### - Describe the iris dataset briefly, and how other data might have similar structure
+#### - Describe the iris dataset briefly and how other data might have similar structure
 #### - Investigate the different ways this data can be examined, in the simplest terms (inspiration from the Principles of Data Analytics module):
   ##### - mean, median, minimum, maximum, standard deviation
   ###### - This analysis can be viewed in the features_file which is a summary of the four main features and three species
@@ -24,7 +24,7 @@
   ##### - can I use user input to ask the user what they want to see?
   ###### - Unfortunately, I did not get to investigate this element of the project, which would be interesting to consider for future projects
   ##### - investigate the pandas read.csv to see what can be done
-  ###### - I used this dataset throughout the notebook, and found it very useful particularly as the species name was within this dataset.
+  ###### - I used this dataset throughout the notebook and found it very useful particularly as the species name was within this dataset.
 
 ##### The iris dataset has been added into this repository, including the raw data, description of the data and index. 
 
@@ -94,7 +94,7 @@ Source: J)
 Source: K)
 
 ## Further Research:
-### This project is intented to be an introduction into the iris dataset, the functionalities of python and how to display data in interesting ways. Below I have listed some other resources which discuss other ways the data can be displayed, such as 3 Dimensional plots and mapping scatterplot sections in colours
+#### This project is intended to be an introduction into the iris dataset, the functionalities of python and how to display data in interesting ways. Below I have listed some other resources which discuss other ways the data can be displayed, such as Three Dimensional plots and mapping scatterplot sections in colours
 
 3D plot: (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html)
 GPC plot: (https://scikit-learn.org/stable/auto_examples/gaussian_process/plot_gpc_iris.html)
@@ -135,9 +135,9 @@ Pairplot, including some key summary figures: (https://www.researchgate.net/figu
 #### 6) np Min: Numpy (https://numpy.org/doc/stable//reference/generated/numpy.min.html)
 #### 7) np Max: Numpy (https://numpy.org/doc/stable//reference/generated/numpy.max.html)
 #### 8) np Std Dev: Numpy (https://numpy.org/doc/stable/reference/generated/numpy.std.html)
-#### 9) pdDataFrame: Geeksforgeeks (https://www.geeksforgeeks.org/how-to-make-a-table-in-python/####using-prettytable)
+#### 9) pdDataFrame: GeeksforGeeks (https://www.geeksforgeeks.org/how-to-make-a-table-in-python/####using-prettytable)
 #### 10) dfround: Stack overflow (https://stackoverflow.com/questions/38255796/pandas-round-is-not-working-for-dataframe)
-#### 11) Standard Deviation definition: Geeksforgeeks(https://www.geeksforgeeks.org/standard-deviation-formula/)
+#### 11) Standard Deviation definition: GeeksforGeeks(https://www.geeksforgeeks.org/standard-deviation-formula/)
 #### 12) loc and iloc: DataCamp (https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
 #### 13) no background output text: Stack overflow (https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
 #### 14) Plot Additions: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
