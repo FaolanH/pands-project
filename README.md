@@ -5,7 +5,7 @@
 ## Interacting with this project
 ### Welcome to this repository!  In this project I will look at what is possible through Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
 
-## This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend one of two options: opening codespaces on this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. The other option would be opening this on VSCode to easily flick between the different sections of the code, to do this please navigate to the download section through the three dots to the top right of the analysis.py file and open file in VSCode. Please note there will be no output in the terminal (other than a message guiding you to the output folders and txt file).
+### This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend one of two options: opening codespaces on this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. The other option would be opening this on VSCode to easily flick between the different sections of the code, to do this please navigate to the download section through the three dots to the top right of the analysis.py file and open file in VSCode. Please note there will be no output in the terminal (other than a message guiding you to the output folders and txt file).
 
 ![image](https://github.com/user-attachments/assets/df0b916a-1b4c-4c10-ad7d-6f9fbd4714eb)
 
@@ -21,9 +21,17 @@
 ##### - Matplotlib.colors
 ##### For more details on these packages, you can view documentation in the references section below.
 #### Importing in the two versions of the iris dataset
-##### The pandas DataFrame is used for the vast majority of the work in this notebook, the only instance where the load.iris() package is used (from sklearn.dataset) is for the heatmap
+##### I used the pandas DataFrame for the vast majority of the work in this notebook, the only instance where I used the load.iris() package (from sklearn.dataset) is for the heatmap
 #### Creating a summary txt file 
-##### Initially, all the analysis is set by calling on the data location and using numpy fuctions. This is done for the dataset as a whole for each feature and then for each feature by species.
+##### Initially, I set all the analysis by calling on the data location and using numpy fuctions (np.mean, np.median, np.min, np.max, np.std). I did this for the dataset as a whole for each feature and then for each feature by species. I then created a summary DataFrame with all this information to display it neatly in the txt. file (which is output separately in the repository as features_file.txt)
+#### Setting the features
+##### In this section I set the features and species into variable that are used throughout the notebook. 
+#### Boxplots
+##### With the modules imported and the data set, in this section I began plotting the data onto boxplots. Here, it was a comparison of the three species and the overall dataset for each feature, with four boxplots saved into the boxplot_outputs folder. This is an important plot to visualise the minimum, maximum and median figure for each feature, which visualizes the data described in the features_file.txt
+#### Scatterplots
+##### For the scatterplots, I showed the comparison between the sepal width and sepal length, sepal width and petal width, petal width and petal length and sepal length and petal length. I think this mixture of analysis and point plotting is interesting in seeing where the different species lie, with clear overlap for some features and distance in others. The outputs of this are saved in the scatterplot folder
+####
+
 
 ## Iris Dataset
 The Fisher's Iris dataset contains 150 rows and 4 columns of data, looking at 150 samples taken from three species of iris: setosa, versicolor and virginica. These samples are measured by four features: sepal width, sepal length, petal width and petal length. There is some interesting context on the background for this dataset and possible uses (Source: L) Iris Dataset Info)
