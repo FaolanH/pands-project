@@ -1,23 +1,28 @@
 # pands-project
 # Author: Faolán Hamilton
-## Project for the Programming and Scripting module
-### In this project I will look at what is possible when using Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
+# Project for the Programming and Scripting module
+## In this project I will look at what is possible when using Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
 
-#### Iris Dataset
+## Iris Dataset
 ### Show the parts of the iris the data refers to "sepal", "petal", diagrams for each species
 
 #### Source: A)
 ![image](https://github.com/user-attachments/assets/137215fd-8540-4511-9c81-c5832036b93a)
 
-#### Project Plan
-#### This was the initial plan I set out when beginning this project, I will go through each statement and discuss it
-##### - Describe the iris dataset briefly, and how other data might have similar structure
-##### - Investigate the different ways this data can be examined, in the simplest terms (inspiration from the Principles of Data Analytics module):
-  ###### - mean, median, minimum, maximum, standard deviation 
-  ###### - plotting the data on histograms/boxplots, comparing the species or across one specific species e.g. comparing petal length across setosa, versicolor and virginica or showing the range of petal length (min to max) in one species
-  ###### - what libraries are available to help me display this data?
-  ###### - can I use user input to ask the user what they want to see?
-  ###### - investigate the pandas read.csv to see what can be done
+## Project Plan
+### This was the initial plan I set out when beginning this project, I will go through each statement and discuss it
+#### - Describe the iris dataset briefly, and how other data might have similar structure
+#### - Investigate the different ways this data can be examined, in the simplest terms (inspiration from the Principles of Data Analytics module):
+  ##### - mean, median, minimum, maximum, standard deviation
+  ###### - This analysis can be viewed in the features_file which is a summary of the four main features and three species
+  ##### - plotting the data on histograms/boxplots, comparing the species or across one specific species e.g. comparing petal length across setosa, versicolor and virginica or showing the range of petal length (min to max) in one species
+  ###### - this analysis can be viewed in the various output folders seen in this repository (histogram_outputs, boxplot_outputs, scatterplot_outputs, heatmap_outputs and pairplot_outputs). 
+  ##### - what libraries are available to help me display this data?
+  ###### - As listed in the references section, I used a series of libraries and packages to help me visualise this data: numpy, pandas, matplotlib, seaborn and sklearn.dataset
+  ##### - can I use user input to ask the user what they want to see?
+  ###### - Unfortunately, I did not get to investigate this element of the project, which would be interesting to consider for future projects
+  ##### - investigate the pandas read.csv to see what can be done
+  ###### - I used this dataset throughout the notebook, and found it very useful particularly as the species name was within this dataset.
 
 ##### The iris dataset has been added into this repository, including the raw data, description of the data and index. 
 
