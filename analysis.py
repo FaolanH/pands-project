@@ -1298,7 +1298,16 @@ plt.close()
 # 19) Markers: Matplotlib (https://matplotlib.org/stable/api/markers_api.html)
 # 20) Saving figures: Stack overflow (https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it)
 # 21) Forward Slash when saving figure: DNM (https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/)
-git 
+# 22) Setting the edgecolour: Matplotlib (https://matplotlib.org/stable/api/figure_api.html)
+# 23) Chapter Matplotlib: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
+# 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
+# 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries)
+# 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
+# 27) ListedColorMap: Matplotlib (https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.ListedColormap.html)
+# 28) Tutorial Colormaps: DataCamp (https://www.datacamp.com/tutorial/matplotlib-colormaps)
+# 29) colors.Colormap: GeeksforGeeks (https://www.geeksforgeeks.org/matplotlib-colors-colormap-class-in-python/)
+# 30) Pairplot: GeeksforGeeks (https://www.geeksforgeeks.org/python-seaborn-pairplot-method/)
+# 31) Numpy Coefficient: Numpy (https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html)
 
 #endregion
 
