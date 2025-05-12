@@ -53,7 +53,7 @@ Souce: https://www.gardenia.net/plant/iris-virginica-var-shrevei
 
 ### HEX Code: #E1AD01
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/c1715073-de4f-4630-89a3-445396ed3350)
 
 Source: Signal identification (https://www.fs.usda.gov/wildflowers/beauty/iris/flower.shtml)
 
@@ -73,7 +73,7 @@ Source: https://www.colorhexa.com/e1ad01
 #### Iris Dataset
 ### Show the parts of the iris the data refers to "sepal", "petal", diagrams for each species
 
-![alt text](image-2.png)
+![image](https://github.com/user-attachments/assets/65aea040-18d3-439c-83e7-46d5f5809a5f)
 
 (https://machinelearning4ya.blogspot.com/2022/04/iris-flowers-classification-using.html)
 
