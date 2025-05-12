@@ -91,6 +91,13 @@ Source: J)
 
 Source: K)
 
+## Further Research:
+### This project is intented to be an introduction into the iris dataset, the functionalities of python and how to display data in interesting ways. Below I have listed some other resources which discuss other ways the data can be displayed, such as 3 Dimensional plots and mapping scatterplot sections in colours
+
+3D plot: (https://scikit-learn.org/stable/auto_examples/decomposition/plot_pca_iris.html)
+GPC plot: (https://scikit-learn.org/stable/auto_examples/gaussian_process/plot_gpc_iris.html)
+Pairplot, including some key summary figures: (https://www.researchgate.net/figure/Distributions-and-correlations-for-numeric-variables-in-iris-petal-length-cm-petal_fig2_362573623)
+
 ## References:
 
 ### In this README:
