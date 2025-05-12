@@ -9,13 +9,27 @@
 
 ![image](https://github.com/user-attachments/assets/df0b916a-1b4c-4c10-ad7d-6f9fbd4714eb)
 
-
 ## Python Script
 ### The following is a breakdown of my python script:
-#### A section 
+#### A section for importing all the packages I need to run the code
+##### - Numpy
+##### - Pandas
+##### - Matplotlib
+##### - Seaborn
+##### - sklearn.datasets
+##### - Matplotlib.patches
+##### - Matplotlib.colors
+##### For more details on these packages, you can view documentation in the references section below.
+#### Importing in the two versions of the iris dataset
+##### The pandas DataFrame is used for the vast majority of the work in this notebook, the only instance where the load.iris() package is used (from sklearn.dataset) is for the heatmap
+#### Creating a summary txt file 
+##### Initially, all the analysis is set by calling on the data location and using numpy fuctions. This is done for the dataset as a whole for each feature and then for each feature by species.
 
 ## Iris Dataset
-### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualise what it is that is being discussed. The imagery shows the differences between the three species used in this dataset. 
+The Fisher's Iris dataset contains 150 rows and 4 columns of data, looking at 150 samples taken from three species of iris: setosa, versicolor and virginica. These samples are measured by four features: sepal width, sepal length, petal width and petal length. There is some interesting context on the background for this dataset and possible uses (Source: L) Iris Dataset Info)
+To see the actual data in the iris dataset, please see the Iris_data_folder for more details (Source: M) Iris Dataset Literal
+
+### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualise what it is that I am discussing. The imagery shows the differences between the three species used in this dataset. 
 
 #### Source: A)
 ![image](https://github.com/user-attachments/assets/137215fd-8540-4511-9c81-c5832036b93a)
@@ -27,7 +41,7 @@
   ##### - mean, median, minimum, maximum, standard deviation
   ###### - This analysis can be viewed in the features_file which is a summary of the four main features and three species
   ##### - plotting the data on histograms/boxplots, comparing the species or across one specific species e.g. comparing petal length across setosa, versicolor and virginica or showing the range of petal length (min to max) in one species
-  ###### - this analysis can be viewed in the various output folders seen in this repository (histogram_outputs, boxplot_outputs, scatterplot_outputs, heatmap_outputs and pairplot_outputs). 
+  ###### - This analysis can be viewed in the various output folders seen in this repository (histogram_outputs, boxplot_outputs, scatterplot_outputs, heatmap_outputs and pairplot_outputs). 
   ##### - what libraries are available to help me display this data?
   ###### - As listed in the references section, I used a series of libraries and packages to help me visualise this data: numpy, pandas, matplotlib, seaborn and sklearn.dataset
   ##### - can I use user input to ask the user what they want to see?
@@ -123,6 +137,8 @@ Pairplot, including some key summary figures: (https://www.researchgate.net/figu
 #### I) Signal identification: FS.USDA.GOV (https://www.fs.usda.gov/wildflowers/beauty/iris/flower.shtml)
 #### J) Signal Yellow Hex Code: Colorhexa (https://www.colorhexa.com/e1ad01)
 #### K) Stem Green Hex Code: Colorhexa (https://www.colorhexa.com/819929)
+#### L) Iris Dataset Info: GeeksforGeeks (https://www.geeksforgeeks.org/iris-dataset/)
+#### M) Iris Dataset Literal: UC Irvine Machine Learning Repository (Source: https://archive.ics.uci.edu/dataset/53/iris)
 
 ### Documentation for packages used:
 
