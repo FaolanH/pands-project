@@ -36,6 +36,8 @@ pd_iris_data = pd.read_csv("https://gist.githubusercontent.com/curran/a08a1080b8
 # Had to bring in the iris_data with the species as code name as they would not accept creating an array with a string, used mainly for heatmaps
 iris_data = load_iris()
 
+df_iris = pd.DataFrame(iris_data.data, columns=iris_data.feature_names) 
+
 #endregion
 
 # region Summary txt.
@@ -1213,13 +1215,47 @@ plt.close()
 #endregion
 
 # region Heatmap
+# The structure of heatmaps was a mixture of two sources: Source 28) Tutorial Colormaps and 29) colors.Colormap
 
-correlation = np.corrcoef(iris_data.data)
+data = (sepal_length, sepal_width)
 
-print (correlation)
+# Setting the colours 
+colours = ['#5A4FCF','#897CAC', '#AC37B2', '#658F3A', '#E1AD01']
+# Source: 27) LinearSegmentedColorMap
+cmap = ListedColormap(colours)
+
+# Making the plot bigger
+# Source 16) Fig size
+plt.figure (figsize=(12,12))
+
+# Setting the title
+plt.title('Correlation between features in the Iris dataset')
+
+# Adding in a note (Source 23) Chapter Matplotlib)
+plt.text (-6,-10,'*Note: Yellow and green indicate a stronger correlation, whereas purple indicate a weaker correlation')
+
+# Setting the y ticks
+#plt.yticks ([0,1,2,3,4,], ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'species'])
+# Setting the x ticks
+#plt.xticks ([0,1,2,3,4,], ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)', 'species'])
+
+# Plotting the data
+plt.imshow(data, cmap = cmap)
+plt.grid(True, color = 'w')
+plt.colorbar()
+
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the heatmap outputs folder
+plt.savefig('heatmap_outputs/heatmap', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it does not go onto the graph
+plt.close()
+
 #endregion
 
-# Pairplot
+# region Pairplot
 
 #endregion
 
@@ -1251,6 +1287,9 @@ print (correlation)
 # 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
 # 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries)
 # 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
+# 27) LinearSegmentedColorMap: Matplotlib (https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LinearSegmentedColormap.html)
+# 28) Tutorial Colormaps: DataCamp (https://www.datacamp.com/tutorial/matplotlib-colormaps)
+# 29) colors.Colormap: GeeksforGeeks(https://www.geeksforgeeks.org/matplotlib-colors-colormap-class-in-python/)
 
 #endregion
 
