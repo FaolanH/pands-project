@@ -5,6 +5,12 @@
 ## Interacting with this project
 ### Welcome to this repository!  In this project I will look at what is possible through Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
 
+## This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend opening codespaces ont this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. Again, please note there will be no 
+
+## Python Script
+### The following is a breakdown of my python script:
+#### A sectio
+
 ## Iris Dataset
 ### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualise what it is that is being discussed. The imagery shows the differences between the three species used in this dataset. 
 
