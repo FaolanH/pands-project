@@ -1,10 +1,12 @@
 # pands-project
 # Author: Faolán Hamilton
 # Project for the Programming and Scripting module
-## In this project I will look at what is possible when using Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
+
+## Interacting with this project
+### Welcome to this repository!  In this project I will look at what is possible through Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
 
 ## Iris Dataset
-### Show the parts of the iris the data refers to "sepal", "petal", diagrams for each species
+### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualise what it is that is being discussed. The imagery shows the differences between the three species used in this dataset. 
 
 #### Source: A)
 ![image](https://github.com/user-attachments/assets/137215fd-8540-4511-9c81-c5832036b93a)
