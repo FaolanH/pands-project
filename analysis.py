@@ -1273,6 +1273,12 @@ plt.close()
 
 #endregion
 
+# region Print message
+
+print ("Thank you for running this code! Please note, there are no outputs in the terminal below (apart from this message) and all outputs of this code are elsewhere in the output folders in the form of pngs (heatmap_outputs, boxplot_outputs, histogram_outputs, pairplot_outputs and scatterplot_outputs) as well as a summary features_file.txt")
+
+# end region 
+
 # region References:
 
 # 1) Setting regions: Stack overflow (https://stackoverflow.com/questions/8265583/dividing-python-module-into-multiple-regions)
