@@ -5,11 +5,14 @@
 ## Interacting with this project
 ### Welcome to this repository!  In this project I will look at what is possible through Python for Data Analytics using a well-known dataset in the coding community: the Iris dataset. Through a mixture of methods I will look at different ways of exploring the data visually and what the results can be used to demonstrate. 
 
-## This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend opening codespaces ont this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. Again, please note there will be no 
+## This project uses a python script to run through the code, which then outputs the results of the analysis into several separate pngs and a txt file. To see how this script runs and recreate the outputs seen in this repository, I would recommend one of two options: opening codespaces on this repository by clicking the green <> Code button to the top right of the repository and creating a codespace to run the code in. The other option would be opening this on VSCode to easily flick between the different sections of the code, to do this please navigate to the download section through the three dots to the top right of the analysis.py file and open file in VSCode. Please note there will be no output in the terminal (other than a message guiding you to the output folders and txt file).
+
+![image](https://github.com/user-attachments/assets/df0b916a-1b4c-4c10-ad7d-6f9fbd4714eb)
+
 
 ## Python Script
 ### The following is a breakdown of my python script:
-#### A sectio
+#### A section 
 
 ## Iris Dataset
 ### Below is a diagram of the components of the Iris flower. When the data refers to "sepal", "petal", it can be hard to visualise what it is that is being discussed. The imagery shows the differences between the three species used in this dataset. 
