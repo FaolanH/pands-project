@@ -33,10 +33,8 @@ from matplotlib.colors import LinearSegmentedColormap, ListedColormap
 # Source: 2) Iris dataset
 pd_iris_data = pd.read_csv("https://gist.githubusercontent.com/curran/a08a1080b88344b0c8a7/raw/0e7a9b0a5d22642a06d3d5b9bcbad9890c8ee534/iris.csv")
 
-# Had to bring in the iris_data with the species as code name as they would not accept creating an array with a string, used mainly for heatmaps
+# Had to bring in the iris_data with the species as code name as they would not accept creating an array with a string, used for heatmaps
 iris_data = load_iris()
-
-df_iris = pd.DataFrame(iris_data.data, columns=iris_data.feature_names) 
 
 #endregion
 
@@ -1285,9 +1283,9 @@ plt.close()
 # 6) np Min: Numpy (https://numpy.org/doc/stable//reference/generated/numpy.min.html)
 # 7) np Max: Numpy (https://numpy.org/doc/stable//reference/generated/numpy.max.html)
 # 8) np Std Dev: Numpy (https://numpy.org/doc/stable/reference/generated/numpy.std.html)
-# 9) pdDataFrame: Geeksforgeeks (https://www.geeksforgeeks.org/how-to-make-a-table-in-python/#using-prettytable)
+# 9) pdDataFrame: GeeksforGeeks (https://www.geeksforgeeks.org/how-to-make-a-table-in-python/#using-prettytable)
 # 10) dfround: Stack overflow (https://stackoverflow.com/questions/38255796/pandas-round-is-not-working-for-dataframe)
-# 11) Standard Deviation definition: Geeksforgeeks(https://www.geeksforgeeks.org/standard-deviation-formula/)
+# 11) Standard Deviation definition: GeeksforGeeks(https://www.geeksforgeeks.org/standard-deviation-formula/)
 # 12) loc and iloc: DataCamp (https://campus.datacamp.com/courses/intermediate-python/dictionaries-pandas?ex=17)
 # 13) no background output text: Stack overflow (https://stackoverflow.com/questions/74696163/how-to-remove-name-and-dtype-from-output-code)
 # 14) Plot Additions: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
