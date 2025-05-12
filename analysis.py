@@ -1215,13 +1215,15 @@ plt.close()
 #endregion
 
 # region Heatmap
-# The structure of heatmaps was a mixture of two sources: Source 28) Tutorial Colormaps and 29) colors.Colormap
 
-data = (sepal_length, sepal_width)
+# In order for Heatmaps to display correctly, there has to be enough data to compare. Using the numpy coefficient module allowed the data to compared crossways
+# The structure of heatmaps was a mixture of two sources: Source 28) Tutorial Colormaps and 29) colors.Colormap
+# Source: 31) Numpy Coefficient
+data = np.corrcoef(iris_data.data)
 
 # Setting the colours 
 colours = ['#5A4FCF','#897CAC', '#AC37B2', '#658F3A', '#E1AD01']
-# Source: 27) LinearSegmentedColorMap
+# Source: 27) ListedColorMap
 cmap = ListedColormap(colours)
 
 # Making the plot bigger
@@ -1257,6 +1259,20 @@ plt.close()
 
 # region Pairplot
 
+# using the seaborn module that was previously imported
+# Source: 30) Pairplot
+palette_colors = {'setosa':'#7c70cb', 'versicolor' : '#632AC5', 'virginica' : '#B9B0E7'}
+sns.pairplot(pd_iris_data, hue ='species', palette=palette_colors)
+
+# Source: 20) Saving figures
+# Using a forward slash for the path helped to not throw an error
+# Source: 21) Forward Slash when saving figure
+# Saving the figure in the pairplot outputs folder
+plt.savefig('pairplot_outputs/pairplot', bbox_inches = 'tight')
+
+# ensures the plot is closed when running off the next plot so it does not go onto the graph
+plt.close()
+
 #endregion
 
 # region References:
@@ -1282,14 +1298,7 @@ plt.close()
 # 19) Markers: Matplotlib (https://matplotlib.org/stable/api/markers_api.html)
 # 20) Saving figures: Stack overflow (https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it)
 # 21) Forward Slash when saving figure: DNM (https://dnmtechs.com/fixing-deprecationwarning-invalid-escape-sequence-in-python-3/)
-# 22) Setting the edgecolour: Matplotlib (https://matplotlib.org/stable/api/figure_api.html)
-# 23) Chapter Matplotlib: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
-# 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
-# 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries)
-# 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
-# 27) LinearSegmentedColorMap: Matplotlib (https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LinearSegmentedColormap.html)
-# 28) Tutorial Colormaps: DataCamp (https://www.datacamp.com/tutorial/matplotlib-colormaps)
-# 29) colors.Colormap: GeeksforGeeks(https://www.geeksforgeeks.org/matplotlib-colors-colormap-class-in-python/)
+git 
 
 #endregion
 
