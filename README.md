@@ -114,7 +114,7 @@ Source: K)
 #### 0.4) Seaborn - https://seaborn.pydata.org/
 #### 0.5) Sklearn.datasets, load.iris() - https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_iris.html
 #### 0.6) Matplotlib, m.patches - https://matplotlib.org/stable/api/patches_api.html
-#### 0.7) Matplotlib, LinearSegmentedColorMap - https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.LinearSegmentedColormap.html
+#### 0.7) Matplotlib, ListedColorMap - https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.ListedColormap.html
 
 ### In analysis.py:
 
@@ -142,5 +142,10 @@ Source: K)
 #### 22) Setting the edgecolour: Matplotlib (https://matplotlib.org/stable/api/figure_api.html)
 #### 23) Chapter Matplotlib: DataCamp (https://campus.datacamp.com/courses/intermediate-python/matplotlib?ex=1)
 #### 24) Assigning hist colours: Matplotlib (https://matplotlib.org/stable/gallery/statistics/histogram_multihist.html)
-#### 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html####controlling-the-legend-ent
+#### 25) Legend Styling: Matplotlib (https://matplotlib.org/stable/users/explain/axes/legend_guide.html#controlling-the-legend-entries)
 #### 26) patches: Matplotlib (https://matplotlib.org/stable/api/patches_api.html)
+#### 27) ListedColorMap: Matplotlib (https://matplotlib.org/stable/api/_as_gen/matplotlib.colors.ListedColormap.html)
+#### 28) Tutorial Colormaps: DataCamp (https://www.datacamp.com/tutorial/matplotlib-colormaps)
+#### 29) colors.Colormap: GeeksforGeeks (https://www.geeksforgeeks.org/matplotlib-colors-colormap-class-in-python/)
+#### 30) Pairplot: GeeksforGeeks (https://www.geeksforgeeks.org/python-seaborn-pairplot-method/)
+#### 31) Numpy Coefficient: Numpy (https://numpy.org/doc/stable/reference/generated/numpy.corrcoef.html)
